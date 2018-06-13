@@ -1,0 +1,12 @@
+{
+    "name": "license-plate-serial-generator",
+    "main": "index.js",
+    "repository": "gitlab:ptrkcsk/license-plate-serial-generator",
+    "author": "Patrik Csak <patrik@csak.email>",
+    "dependencies": {
+        "typescript": "^2.9.1"
+    },
+    "devDependencies": {
+        "jest": "^23.1.0"
+    }
+}
