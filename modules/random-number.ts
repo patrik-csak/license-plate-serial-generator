@@ -1,5 +1,5 @@
-function randomNumber(min: number, max: number): number
 function randomNumber(max: number): number
+function randomNumber(min: number, max: number): number
 
 function randomNumber(a: number, b?: number): number {
     const max = b || a

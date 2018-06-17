@@ -5,3 +5,8 @@ modules/*.js
 modules/*.js.map
 states/*.js
 states/*.js.map
+states/data/*.js
+states/data/*.js.map
+
+/*.js
+/*.js.map

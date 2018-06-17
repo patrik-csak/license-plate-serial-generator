@@ -1,7 +1,14 @@
 import randomNumber from './random-number'
 
-export default (length: number): string => {
-    const number: number = randomNumber(0, Math.pow(10, length) - 1)
+function randomNumericString(max: number): string
+function randomNumericString(min: number, max: number): string
 
-    return String(number).padStart(length, '0')
+function randomNumericString(a: number, b?: number): string {
+    const min: number = b ? a : 0
+    const max: number = b || a
+    const number = randomNumber(min, max)
+
+    return String(number).padStart(Math.floor(Math.log10(max)) + 1, '0')
 }
+
+export default randomNumericString

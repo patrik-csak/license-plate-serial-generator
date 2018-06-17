@@ -1,4 +1,4 @@
-const base26ToDecimal = require('../modules/base-26-to-decimal').default
+const base26ToDecimal = require('../modules/bb26-to-decimal').default
 
 test('convert \'a\' to 1', () => {
   expect(base26ToDecimal('a'))
