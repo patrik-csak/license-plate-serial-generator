@@ -8,6 +8,7 @@ import connecticut from './states/connecticut'
 import delaware from './states/delaware'
 import washingtonDc from './states/washington-dc'
 import florida from './states/florida'
+import georgia from './states/georgia'
 
 class Lpsg {
     public static alabama = alabama
@@ -39,6 +40,9 @@ class Lpsg {
 
     public static florida = florida
     public static fl = florida
+
+    public static georgia = georgia
+    public static ga = georgia
 }
 
 export default Lpsg
