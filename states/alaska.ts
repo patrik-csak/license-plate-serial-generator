@@ -36,10 +36,10 @@ const alaska = (): string => {
         numbers = randomNumericString(100, 999)
     } else if (letterRange.from === 'gaa') {
         letters = Bb26.randomString(letterRange.from, letterRange.to)
-        numbers = randomNumericString(letters === 'gaa' ? 199 : 0, 999)
+        numbers = randomNumericString(letters === 'gaa' ? 199 : 1, 999)
     } else if (letterRange.from === 'kaa') {
         letters = Bb26.randomString(letterRange.from, letterRange.to)
-        numbers = randomNumericString(letters === 'kaa' ? 100 : 0, 999)
+        numbers = randomNumericString(letters === 'kaa' ? 100 : 1, 999)
     }
 
     return `${letters.toUpperCase()} ${numbers}`

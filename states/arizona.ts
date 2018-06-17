@@ -8,7 +8,7 @@ import randomNumericString from '../modules/random-numeric-string'
 
 const arizona = (): string => {
     const letters: string = Bb26.randomString('aaa', 'cjj')
-    const numbers: string = randomNumericString(letters === 'aaa' ? 1 : 0, 9999)
+    const numbers: string = randomNumericString(1, 9999)
 
     return letters.toUpperCase() + numbers
 }
