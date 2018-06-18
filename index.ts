@@ -11,6 +11,7 @@ import florida from './states/florida'
 import georgia from './states/georgia'
 import hawaii from './states/hawaii'
 import idaho from './states/idaho'
+import illinois from './states/illinois'
 
 class Lpsg {
     public static alabama = alabama
@@ -51,6 +52,9 @@ class Lpsg {
 
     public static idaho = idaho
     public static id = idaho
+
+    public static illinois = illinois
+    public static il = illinois
 }
 
 export default Lpsg
