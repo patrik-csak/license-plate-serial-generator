@@ -4,12 +4,12 @@
 // - Progression of first letter: `G, H, I, J, B, P, Q, T, U, X, Y`
 
 import randomNumericString from '../modules/random-numeric-string'
-import randomElement from '../modules/random-element'
+import random from '../modules/random'
 import Bb26 from '../modules/bb26'
 
 const florida = (): string => {
     const firstLetters = ['g', 'h', 'i', 'j', 'b', 'p', 'q', 't', 'u']
-    const letters = `${randomElement(firstLetters)}${Bb26.randomString('z')}`
+    const letters = `${random(firstLetters)}${Bb26.randomString('z')}`
         .toUpperCase()
     const numbers: string = `${randomNumericString(999)} ${randomNumericString(9)}`
 

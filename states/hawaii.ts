@@ -1,6 +1,6 @@
 // See county algorithms for specs
 
-import randomElement from '../modules/random-element'
+import random from '../modules/random'
 import Bb26 from '../modules/bb26'
 import randomNumericString from '../modules/random-numeric-string'
 
@@ -10,11 +10,11 @@ interface County {
 
 // Hawaii county format: `HAB 123` or `ZAB 123`
 const hawaiiCounty = (): string => {
-    const county: string = randomElement(['H', 'Z'])
-    const letters = Bb26.randomString('aa', 'zz').toUpperCase()
+    const county: string = random(['h', 'z'])
+    const letters = Bb26.randomString('aa', 'zz')
     const numbers = randomNumericString(999)
 
-    return county + letters + ' ' + numbers
+    return `${county}${letters} ${numbers}`.toUpperCase()
 }
 
 // Honolulu county format:
@@ -33,12 +33,12 @@ const honoluluCounty = (): string => {
         {min: 'i', max: 'j'},
         {min: 'n', max: 'y'},
     ]
-    const letter2Range = randomElement(letterRanges)
-    const letter3Range = randomElement(letterRanges)
+    const letter2Range = random(letterRanges)
+    const letter3Range = random(letterRanges)
     let letters: string = ''
     const numbers: string = randomNumericString(999)
 
-    letters += randomElement(countyLetters)
+    letters += random(countyLetters)
     letters += Bb26.randomString(letter2Range.min, letter2Range.max)
     letters += Bb26.randomString(letter3Range.min, letter3Range.max)
 
@@ -55,8 +55,8 @@ const kauaiCounty = (): string => {
 
 // Maui county format: `MAB 123` or `LAB 123`
 const mauiCounty = (): string => {
-    const county: string = randomElement(['M', 'L'])
-    const letters = Bb26.randomString('aa', 'zz').toUpperCase()
+    const county: string = random(['m', 'l'])
+    const letters = Bb26.randomString('aa', 'zz')
     const numbers = randomNumericString(999)
 
     return `${county}${letters} ${numbers}`.toUpperCase()
@@ -71,7 +71,7 @@ const hawaii = (): string => {
     ]
 
     // TODO: Weigh county choice based on population
-    return randomElement(counties)()
+    return random(counties)()
 }
 
 export default hawaii

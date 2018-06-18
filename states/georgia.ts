@@ -4,7 +4,7 @@
 //   - `PAA0000` to `QAL9999`
 //   - `CAR0000` to `CHC9999`
 
-import randomElement from '../modules/random-element'
+import random from '../modules/random'
 import Bb26 from '../modules/bb26'
 import randomNumericString from '../modules/random-numeric-string'
 
@@ -18,7 +18,7 @@ const georgia = (): string => {
         {min: 'paa', max: 'qal'},
         {min: 'car', max: 'chc'}
     ]
-    const letterRange: LetterRange = randomElement(letterRanges)
+    const letterRange: LetterRange = random(letterRanges)
     const letters: string = Bb26
         .randomString(letterRange.min, letterRange.max)
         .toUpperCase()
