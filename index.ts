@@ -25,6 +25,7 @@ import minnesota from './states/minnesota'
 import mississippi from './states/mississippi'
 import missouri from './states/missouri'
 import montana from './states/montana'
+import nebraska from './states/nebraska'
 
 class Lpsg {
     public static alabama = alabama
@@ -107,6 +108,9 @@ class Lpsg {
 
     public static montana = montana
     public static mt = montana
+
+    public static nebraska = nebraska
+    public static ne = nebraska
 }
 
 export default Lpsg
