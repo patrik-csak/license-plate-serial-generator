@@ -5,6 +5,12 @@ import decimalToBb26 from './decimal-to-bb26'
 import bb26ToDecimal from './bb26-to-decimal'
 import randomBb26String from './random-bb26-string'
 
+interface RangeParams {
+    start?: string
+    end: string
+    exclude?: string | string[]
+}
+
 class Bb26 {
     public static add(a: string, b: string): string {
         return this.fromDecimal(this.toDecimal(a) + this.toDecimal(b))
@@ -34,15 +40,13 @@ class Bb26 {
 
     public static randomString = randomBb26String
 
-    public static range(max: string): string[]
-    public static range(min: string, max: string): string[]
-    public static range(a: string, b?: string): string[] {
-        const min: string = b ? a : 'a'
-        const max: string = b || a
+    public static range({start, end, exclude = []}: RangeParams): string[] {
+        exclude = typeof exclude === 'string' ? [exclude] : exclude
+        start = start || 'a'
         let array: string[] = []
 
-        for (let i = min; Bb26.lessThan(i, max); i = Bb26.increment(i)) {
-            array.push(i)
+        for (let i = start; Bb26.lessThan(i, end); i = Bb26.increment(i)) {
+            if (!exclude.includes(i)) array.push(i)
         }
 
         return array

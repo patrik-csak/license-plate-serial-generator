@@ -13,10 +13,10 @@ const missouri = (): string => {
     }
 
     const randomLetter = (): string => {
-        const validLetters: string[] = Bb26.range('i')
-            .concat(Bb26.range('j', 'o'))
-            .concat(['p'])
-            .concat(Bb26.range('r', 'aa'))
+        const validLetters: string[] = Bb26.range({
+            end: 'z',
+            exclude: ['i', 'o', 'q']
+        })
 
         return random(validLetters)
     }
