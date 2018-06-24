@@ -34,6 +34,7 @@ import newYork from './states/new-york'
 import northCarolina from './states/north-carolina'
 import northDakota from './states/north-dakota'
 import ohio from './states/ohio'
+import oklahoma from './states/oklahoma'
 
 class Lpsg {
     public static alabama = alabama
@@ -143,6 +144,9 @@ class Lpsg {
 
     public static ohio = ohio
     public static oh = ohio
+
+    public static oklahoma = oklahoma
+    public static ok = oklahoma
 }
 
 export default Lpsg
