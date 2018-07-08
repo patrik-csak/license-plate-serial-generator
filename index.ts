@@ -44,6 +44,7 @@ import tennessee from './states/tennessee'
 import texas from './states/texas'
 import utah from './states/utah'
 import vermont from './states/vermont'
+import virginia from './states/virginia'
 
 class Lpsg {
     public static alabama = alabama
@@ -183,6 +184,9 @@ class Lpsg {
 
     public static vermont = vermont
     public static vt = vermont
+
+    public static virginia = virginia
+    public static va = virginia
 }
 
 export default Lpsg
