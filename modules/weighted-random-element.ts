@@ -1,22 +1,23 @@
 import randomNumber from './random-number'
 
-interface Element {
-    value: any
-    weight: number
+interface Element<T> {
+  value: T
+  weight: number
 }
 
-const weightedRandomElement = (elements: Element[]): any => {
-    const total: number = elements.reduce(
-        (sum, element) => sum + element.weight,
-        0
-    )
-    let number: number = randomNumber(1, total)
+function weightedRandomElement<T> (elements: Element<T>[]): T {
+  const total: number = elements.reduce((sum, element) => {
+    return sum + element.weight
+  }, 0)
+  let number: number = randomNumber(1, total)
 
-    for (let i = 0; i < elements.length; i++) {
-        number -= elements[i].weight
+  for (const element of elements) {
+    number -= element.weight
 
-        if (number <= 0) return elements[i].value
-    }
+    if (number <= 0) return element.value
+  }
+
+  throw new Error('number is somehow greater than 0')
 }
 
 export default weightedRandomElement
