@@ -6,7 +6,7 @@ import {
   getEndingLetters,
   testSerial,
   testSerialFormat,
-} from '../../modules'
+} from '../../lib'
 import montana from './montana'
 
 describe('Montana', () => {

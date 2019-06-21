@@ -2,7 +2,7 @@
 // - Format: `AB 12345`
 // - Range: `AQ 11001` to `BP 20703`
 
-import testSerial from '../../modules/test-serial'
+import testSerial from '../../lib/test-serial'
 import illinois from './illinois'
 import {
   Bb26,
@@ -10,7 +10,7 @@ import {
   getEndingDigits,
   testSerialFormat,
   toUpperCase,
-} from '../../modules'
+} from '../../lib'
 
 describe('Illinois', () => {
   testSerialFormat(illinois(), /^[A-Z]{2} \d{5}$/)

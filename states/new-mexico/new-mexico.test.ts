@@ -2,10 +2,10 @@
 // - Format: `123-ABC`
 // - Range: `001-MAA` to `999-WJT`
 
-import testSerial from '../../modules/test-serial'
+import testSerial from '../../lib/test-serial'
 import newMexico from './new-mexico'
-import getBeginningDigits from '../../modules/get-beginning-digits'
-import testSerialFormat from '../../modules/test-serial-format'
+import getBeginningDigits from '../../lib/get-beginning-digits'
+import testSerialFormat from '../../lib/test-serial-format'
 
 describe('New Mexico', () => {
   testSerialFormat(newMexico(), /^\d{3}-[A-Z]+$/)

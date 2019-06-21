@@ -1,4 +1,4 @@
-import { Bb26, randomNumericString, weightedRandomElement } from '../../modules'
+import { Bb26, randomNumericString, weightedRandomElement } from '../../lib'
 
 interface LetterRange {
   value: { from: string, to: string }

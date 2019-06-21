@@ -8,7 +8,7 @@ import {
   getBeginningLetters, getEndingDigits,
   testSerial,
   testSerialFormat,
-} from '../../modules'
+} from '../../lib'
 import massachusetts from './massachusetts'
 
 describe('Massachusetts', () => {

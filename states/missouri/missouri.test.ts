@@ -2,7 +2,7 @@
 // - Format: `XA1 B2C`, where `X` corresponds to month of expiration
 
 import missouri from './missouri'
-import { testSerialFormat } from '../../modules'
+import { testSerialFormat } from '../../lib'
 
 describe('Missouri', () => {
   testSerialFormat(missouri(), /^[A-HJ-NPR-Z][A-Z]\d [A-Z]\d[A-Z]$/)

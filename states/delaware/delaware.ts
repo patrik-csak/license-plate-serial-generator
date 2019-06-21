@@ -1,4 +1,4 @@
-import randomNumber from '../../modules/random-number'
+import randomNumber from '../../lib/random-number'
 
 const delaware = (): string => `${randomNumber(999999)}`
 

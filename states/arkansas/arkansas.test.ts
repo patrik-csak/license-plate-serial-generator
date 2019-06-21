@@ -10,7 +10,7 @@ import {
   testSerial,
   testSerialFormat,
   toUpperCase,
-} from '../../modules'
+} from '../../lib'
 
 describe('Arkansas', () => {
   testSerialFormat(arkansas(), /^\d{3} [A-Z]{3}$/)

@@ -8,7 +8,7 @@ import {
   getEndingLetters,
   testSerial,
   testSerialFormat, toUpperCase,
-} from '../../modules'
+} from '../../lib'
 import northDakota from './north-dakota'
 
 describe('North Dakota', () => {

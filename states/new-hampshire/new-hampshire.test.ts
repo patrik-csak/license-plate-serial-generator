@@ -2,7 +2,7 @@
 // - Format: `123 4567`
 // - Range: `100 0000` to `458 5718`
 
-import { testSerial, testSerialFormat } from '../../modules'
+import { testSerial, testSerialFormat } from '../../lib'
 import newHampshire from './new-hampshire'
 
 describe('New Hampshire', () => {

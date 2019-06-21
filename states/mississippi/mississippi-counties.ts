@@ -1,4 +1,4 @@
-import { Bb26 } from '../../modules'
+import { Bb26 } from '../../lib'
 
 interface County {
   county: string
@@ -38,10 +38,7 @@ const counties: County[] = [
   { county: 'Jasper', codes: ['ja', 'jb'] },
   { county: 'Jefferson', codes: ['jf'] },
   { county: 'Jefferson Davis', codes: ['jd'] },
-  {
-    county: 'Jones',
-    codes: Bb26.range({ start: 'jp', end: 'js', exclude: 'jn' }),
-  },
+  { county: 'Jones', codes: ['jn', 'jp', 'jq', 'jr'], },
   { county: 'Kemper', codes: ['km'] },
   { county: 'Lafayette', codes: Bb26.range({ start: 'lx', end: 'ma' }) },
   { county: 'Lamar', codes: Bb26.range({ start: 'll', end: 'lo' }) },

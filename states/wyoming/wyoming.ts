@@ -1,6 +1,6 @@
-import randomNumericString from '../../modules/random-numeric-string'
-import numberRange from '../../modules/number-range'
-import random from '../../modules/random'
+import randomNumericString from '../../lib/random-numeric-string'
+import numberRange from '../../lib/number-range'
+import random from '../../lib/random'
 
 const wyoming = (): string => {
   // TODO: Weigh county choice based on population

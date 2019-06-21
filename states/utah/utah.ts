@@ -1,4 +1,4 @@
-import { Bb26, random, randomNumericString } from '../../modules'
+import { Bb26, random, randomNumericString } from '../../lib'
 
 const arch = (): string => {
   let serial = Bb26.randomString('v', 'z')

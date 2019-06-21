@@ -1,4 +1,4 @@
-import randomNumericString from '../../modules/random-numeric-string'
+import randomNumericString from '../../lib/random-numeric-string'
 
 const newHampshire = (): string => {
     const numbers: string = randomNumericString(1000000, 4585718)

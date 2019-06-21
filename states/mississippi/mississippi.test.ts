@@ -3,9 +3,9 @@
 
 import counties from './mississippi-counties'
 import mississippi from './mississippi'
-import testSerial from '../../modules/test-serial'
-import testSerialFormat from '../../modules/test-serial-format'
-import toUpperCase from '../../modules/to-upper-case'
+import testSerial from '../../lib/test-serial'
+import testSerialFormat from '../../lib/test-serial-format'
+import toUpperCase from '../../lib/to-upper-case'
 
 describe('Mississippi', () => {
   testSerialFormat(mississippi(), /[A-Z]{3} \d{4}/)

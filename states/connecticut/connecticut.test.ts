@@ -3,13 +3,13 @@
 // - Range: `AA-00001` to `AV-00042`
 
 import connecticut from './connecticut'
-import interpunct from '../../modules/interpunct'
+import interpunct from '../../lib/interpunct'
 import {
   Bb26,
   getBeginningLetters,
   getEndingDigits,
   testSerial,
-} from '../../modules'
+} from '../../lib'
 
 describe('Connecticut', () => {
   testSerial('Should be the correct format', connecticut(), serial => {

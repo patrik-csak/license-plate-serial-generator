@@ -11,7 +11,7 @@
 //   - `10B A123`
 
 import idaho from './idaho'
-import testSerial from '../../modules/test-serial'
+import testSerial from '../../lib/test-serial'
 
 describe('Idaho', () => {
   testSerial('Should start with county code', idaho(), serial => {

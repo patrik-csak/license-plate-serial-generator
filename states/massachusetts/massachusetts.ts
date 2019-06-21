@@ -3,7 +3,7 @@ import {
   random,
   randomNumericString,
   toUpperCase,
-} from '../../modules'
+} from '../../lib'
 
 const massachusetts = (): string => {
   const validLetters = Bb26.range({ start: 'aaa', end: 'aaaa' })

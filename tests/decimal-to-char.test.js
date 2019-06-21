@@ -1,4 +1,4 @@
-const decimalToChar = require('../modules/decimal-to-char').default
+const decimalToChar = require('../lib/decimal-to-char').default
 
 test('convert 1 to \'a\'', () => {
   expect(decimalToChar(1))

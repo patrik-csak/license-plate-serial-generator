@@ -9,7 +9,7 @@ import {
   testSerial,
   testSerialFormat,
   toUpperCase,
-} from '../../modules'
+} from '../../lib'
 import washingtonDc from './washington-dc'
 
 describe('Washington DC', () => {

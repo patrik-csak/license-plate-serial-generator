@@ -3,8 +3,8 @@
 // - Range: `4` to `999999`
 
 import delaware from './delaware'
-import testSerial from '../../modules/test-serial'
-import testSerialFormat from '../../modules/test-serial-format'
+import testSerial from '../../lib/test-serial'
+import testSerialFormat from '../../lib/test-serial-format'
 
 describe('Delaware', () => {
   testSerialFormat(delaware(), /\d{1,6}/)

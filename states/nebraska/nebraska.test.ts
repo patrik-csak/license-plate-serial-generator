@@ -13,7 +13,7 @@ import {
   getBeginningLetters, getEndingDigits, randomNumber,
   testSerial,
   testSerialFormat, toUpperCase,
-} from '../../modules'
+} from '../../lib'
 import { abc123, countyCoded } from './nebraska'
 
 describe('Nebraska', () => {

@@ -1,4 +1,4 @@
-import { Bb26, randomNumber, randomNumericString } from '../../modules'
+import { Bb26, randomNumber, randomNumericString } from '../../lib'
 
 const montana = (): string => {
   // TODO: Weigh county choice by population

@@ -5,7 +5,7 @@
 //   - `123ABC`
 
 import indiana from './indiana'
-import { testSerialFormat } from '../../modules'
+import { testSerialFormat } from '../../lib'
 
 describe('Indiana', () => {
   testSerialFormat(indiana(), /^\d{3}[A-Z]{1,3}$/)

@@ -9,7 +9,7 @@ import {
   getBeginningLetters, getEndingDigits,
   testSerial,
   testSerialFormat, toUpperCase,
-} from '../../modules'
+} from '../../lib'
 import { alphaNumeric, numeric } from './rhode-island'
 
 describe('Rhode Island', () => {

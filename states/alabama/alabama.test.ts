@@ -4,8 +4,8 @@
 
 import range = require('lodash.range')
 import alabama from './alabama'
-import testSerial from '../../modules/test-serial'
-import getBeginningDigits from '../../modules/get-beginning-digits'
+import testSerial from '../../lib/test-serial'
+import getBeginningDigits from '../../lib/get-beginning-digits'
 
 // https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Alabama#County_coding
 const countyCodes = range(1, 68).concat(70, 80)

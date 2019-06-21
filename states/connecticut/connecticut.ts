@@ -1,4 +1,4 @@
-import { Bb26, interpunct, randomNumericString } from '../../modules'
+import { Bb26, interpunct, randomNumericString } from '../../lib'
 
 const connecticut = (): string => {
   const letters: string = Bb26.randomString('aa', 'ap').toUpperCase()

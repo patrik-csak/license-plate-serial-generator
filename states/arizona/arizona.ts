@@ -3,7 +3,7 @@
 // - Range:
 //   - `AAA0001` to `CJJ9999`
 
-import { Bb26, randomNumericString } from '../../modules'
+import { Bb26, randomNumericString } from '../../lib'
 
 const arizona = (): string => {
   const letters: string = Bb26.randomString('aaa', 'cjj')

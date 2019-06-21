@@ -4,12 +4,12 @@
 //   - `11-12345`
 // - First digit/digits county code
 
-import testSerialFormat from '../../modules/test-serial-format'
+import testSerialFormat from '../../lib/test-serial-format'
 import wyoming from './wyoming'
-import testSerial from '../../modules/test-serial'
-import getBeginningDigits from '../../modules/get-beginning-digits'
-import numberRange from '../../modules/number-range'
-import getEndingDigits from '../../modules/get-ending-digits'
+import testSerial from '../../lib/test-serial'
+import getBeginningDigits from '../../lib/get-beginning-digits'
+import numberRange from '../../lib/number-range'
+import getEndingDigits from '../../lib/get-ending-digits'
 
 describe('Wyoming', () => {
   testSerialFormat(wyoming(), /^\d{1,2}-\d{5}$/)

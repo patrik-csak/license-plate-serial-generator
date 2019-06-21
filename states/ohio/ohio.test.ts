@@ -8,9 +8,9 @@ import {
   testSerial,
   testSerialFormat,
   toUpperCase,
-} from '../../modules'
+} from '../../lib'
 import ohio from './ohio'
-import Bb26 from '../../modules/bb26'
+import Bb26 from '../../lib/bb26'
 
 describe('Ohio', () => {
   testSerialFormat(ohio(), /^[A-Z]{3} \d{4}$/)

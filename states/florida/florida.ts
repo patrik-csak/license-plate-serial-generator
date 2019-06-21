@@ -1,4 +1,4 @@
-import { Bb26, randomNumericString } from '../../modules'
+import { Bb26, randomNumericString } from '../../lib'
 
 const florida = (): string => {
   let serial = 'Z'

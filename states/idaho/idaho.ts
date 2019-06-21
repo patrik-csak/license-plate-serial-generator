@@ -1,4 +1,4 @@
-import { Bb26, random, randomNumericString, shuffle } from '../../modules'
+import { Bb26, random, randomNumericString, shuffle } from '../../lib'
 
 const idaho = (): string => {
   interface County {

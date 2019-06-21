@@ -1,4 +1,4 @@
-import { Bb26, interpunct, randomNumericString } from '../../modules'
+import { Bb26, interpunct, randomNumericString } from '../../lib'
 
 const nevada = (): string => {
   const left: string = randomNumericString(1, 999)

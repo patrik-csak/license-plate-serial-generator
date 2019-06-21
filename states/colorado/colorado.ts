@@ -1,4 +1,4 @@
-import { Bb26, random, randomNumericString } from '../../modules'
+import { Bb26, random, randomNumericString } from '../../lib'
 
 const colorado = (): string => {
   const letters = random(Bb26.range({ start: 'aewt', end: 'bfmz' }))

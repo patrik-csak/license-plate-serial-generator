@@ -9,7 +9,7 @@ import {
   testSerial,
   testSerialFormat,
   toUpperCase,
-} from '../../modules'
+} from '../../lib'
 
 const getLetters = (serial: string) => serial.slice(0, 3) + serial[4]
 

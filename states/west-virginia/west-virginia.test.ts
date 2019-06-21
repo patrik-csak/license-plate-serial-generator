@@ -14,7 +14,7 @@
 //     - O, N, D indicate Oct, Nov, Dec
 //   - Series 'S' and 'SA-SZ' reserved for optional Scenic plates
 
-import { getEndingDigits, testSerial, testSerialFormat } from '../../modules'
+import { getEndingDigits, testSerial, testSerialFormat } from '../../lib'
 import westVirginia from './west-virginia'
 
 describe('West Virginia', () => {

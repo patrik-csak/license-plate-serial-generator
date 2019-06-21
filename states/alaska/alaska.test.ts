@@ -6,7 +6,7 @@
 //   - `KAA 100` to `KDY 999` (as of 2019-04-10)
 
 import alaska from './alaska'
-import { Bb26, testSerial, testSerialFormat, toUpperCase } from '../../modules'
+import { Bb26, testSerial, testSerialFormat, toUpperCase } from '../../lib'
 
 describe('Alaska', () => {
   testSerialFormat(alaska(), /^[A-Z]{3} \d{3}$/)

@@ -5,7 +5,7 @@
 //   - `10A 123`
 //   - First `1/10` is county code of issuance (1-67, excluding 66)
 
-import { getBeginningDigits, testSerial, testSerialFormat } from '../../modules'
+import { getBeginningDigits, testSerial, testSerialFormat } from '../../lib'
 import southDakota from './south-dakota'
 
 describe('South Dakota', () => {

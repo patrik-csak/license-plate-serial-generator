@@ -7,7 +7,7 @@ import {
   getBeginningLetters, getEndingDigits,
   testSerial,
   testSerialFormat, toUpperCase,
-} from '../../modules'
+} from '../../lib'
 import minnesota from './minnesota'
 
 describe('Minnesota', () => {

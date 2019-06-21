@@ -1,4 +1,4 @@
-import { Bb26, numberRange, random, randomNumericString } from '../../modules'
+import { Bb26, numberRange, random, randomNumericString } from '../../lib'
 
 const countyCoded = (county: number): string => {
   let serial: string = `${county}-${Bb26.randomString('zz')}`

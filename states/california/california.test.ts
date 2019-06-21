@@ -3,7 +3,7 @@
 // - Range: `6TPW000` to `8KPP139`
 
 import california from './california'
-import { Bb26, testSerial, testSerialFormat, toUpperCase } from '../../modules'
+import { Bb26, testSerial, testSerialFormat, toUpperCase } from '../../lib'
 
 describe('California', () => {
   testSerialFormat(california(), /^\d[A-Z]{3}\d{3}$/)

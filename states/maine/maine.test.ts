@@ -8,7 +8,7 @@ import {
   getEndingLetters,
   testSerial,
   testSerialFormat,
-} from '../../modules'
+} from '../../lib'
 import maine from './maine'
 
 describe('Maine', () => {

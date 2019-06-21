@@ -1,4 +1,4 @@
-import { Bb26, random, randomNumber, toUpperCase } from '../../modules'
+import { Bb26, random, randomNumber, toUpperCase } from '../../lib'
 
 const maine = (): string => {
   const digits = randomNumber(5252).toString()

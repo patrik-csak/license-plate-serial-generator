@@ -1,4 +1,4 @@
-import { Bb26, randomNumber, randomNumericString } from '../../modules'
+import { Bb26, randomNumber, randomNumericString } from '../../lib'
 
 const southDakota = (): string => {
   const county: number = randomNumber(1, 67)

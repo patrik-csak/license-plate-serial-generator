@@ -7,7 +7,7 @@ import {
   interpunct,
   testSerial,
   testSerialFormat,
-} from '../../modules'
+} from '../../lib'
 import nevada from './nevada'
 
 describe('Nevada', () => {

@@ -2,7 +2,7 @@
 // - Format: `123 ABC`
 // - Range: `901 JCB` to `253 ZJK`
 
-import testSerial from '../../modules/test-serial'
+import testSerial from '../../lib/test-serial'
 import kentucky from './kentucky'
 import {
   Bb26,
@@ -10,7 +10,7 @@ import {
   getEndingLetters,
   testSerialFormat,
   toUpperCase,
-} from '../../modules'
+} from '../../lib'
 
 describe('Kentucky', () => {
   testSerialFormat(kentucky(), /^\d{3} [A-Z]{3}$/)
