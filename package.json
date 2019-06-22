@@ -1,19 +1,51 @@
 {
   "name": "license-plate-serial-generator",
-  "main": "index.js",
-  "repository": "gitlab:ptrkcsk/license-plate-serial-generator",
+  "description": "License plate serial generator",
+  "version": "0.1.0",
+  "repository": "github:ptrkcsk/license-plate-serial-generator",
   "author": "Patrik Csak <patrik@csak.email>",
-  "scripts": {
-    "test": "jest"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ptrkcsk/BB26/issues"
   },
-  "dependencies": {},
+  "homepage": "https://github.com/ptrkcsk/BB26#readme",
+  "keywords": [
+    "license plate",
+    "serial",
+    "generator",
+    "random"
+  ],
+  "main": "dist",
+  "files": [
+    "dist",
+    "!dist/*.js.map"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "docs": "typedoc",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "bb26": "^0.3.1",
+    "lodash.random": "^3.2.0",
+    "lodash.sample": "^4.2.1",
+    "lodash.shuffle": "^4.2.0"
+  },
   "devDependencies": {
+    "@sindresorhus/tsconfig": "^0.4.0",
     "@types/jest": "^24.0.13",
+    "@types/lodash.random": "^3.2.6",
     "@types/lodash.range": "^3.2.6",
+    "@types/lodash.sample": "^4.2.6",
+    "@types/lodash.shuffle": "^4.2.6",
     "jest": "^24.8.0",
     "lodash.range": "^3.2.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.2.0",
+    "typedoc": "^0.14.2",
     "typescript": "^3.5.1"
-  }
+  },
+  "types": "dist"
 }
