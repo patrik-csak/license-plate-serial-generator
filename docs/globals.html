@@ -1066,6 +1066,14 @@ img { max-width: 100%; }
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<div class="tsd-panel tsd-typography">
+			<h1 id="license-plate-serial-generator">License Plate Serial Generator</h1>
+			<p><a href="https://codeclimate.com/github/ptrkcsk/license-plate-serial-generator"><img src="https://badgen.net/codeclimate/coverage/ptrkcsk/license-plate-serial-generator?icon=codeclimate" alt="License Plate Serial Generator test coverage"></a> <a href="https://codeclimate.com/github/ptrkcsk/license-plate-serial-generator"><img src="https://badgen.net/codeclimate/maintainability/ptrkcsk/license-plate-serial-generator?icon=codeclimate" alt="License Plate Serial Generator maintainability"></a> <a href="https://packagephobia.now.sh/result?p=license-plate-serial-generator"><img src="https://badgen.net/packagephobia/install/license-plate-serial-generator" alt="License Plate Serial Generator install size"></a> <a href="https://bundlephobia.com/result?p=license-plate-serial-generator"><img src="https://badgen.net/bundlephobia/minzip/license-plate-serial-generator" alt="License Plate Serial Generator minified and gzipped size"></a></p>
+			<h2 id="installation">Installation</h2>
+			<pre><code class="language-bash">npm i license-plate-serial-generator</code></pre>
+			<h2 id="usage">Usage</h2>
+			<p><a href="https://ptrkcsk.github.io/license-plate-serial-generator/">API documentation</a></p>
+		</div>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
@@ -1141,9 +1149,18 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/alabama/alabama.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/alabama/alabama.ts#L16">states/alabama/alabama.ts:16</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Generates random serial for <a href="https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Alabama#1976_to_present">Alabama</a></p>
+							</div>
+							<p><strong>Serial format</strong>: <code>0AB1234</code> or <code>00AB123</code>, where <code>0</code> or <code>00</code> is county code</p>
+							<pre><code>import { alabama } from <span class="hljs-string">'license-plate-serial-generator'</span>
+
+<span class="hljs-function"><span class="hljs-title">alabama</span><span class="hljs-params">()</span></span> <span class="hljs-comment">// '37KA7685'</span></code></pre>
+						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 					</li>
 				</ul>
@@ -1158,9 +1175,19 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/alaska/alaska.ts:6</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/alaska/alaska.ts#L19">states/alaska/alaska.ts:19</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Generates random serial for <a href="https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Alaska#1953_to_present">Alaska</a></p>
+							</div>
+							<p><strong>Serial format</strong>: <code>ABC 123</code></p>
+							<p><strong>Serial range</strong>: <code>FUZ 100</code> to <code>FUZ 999</code>, <code>GAA 100</code> to <code>GZZ 999</code>, <code>KAA 100</code> to <code>KDY 641</code></p>
+							<pre><code>import { alaska } from <span class="hljs-string">'license-plate-serial-generator'</span>
+
+<span class="hljs-function"><span class="hljs-title">alaska</span><span class="hljs-params">()</span></span> <span class="hljs-comment">// 'KCA 245'</span></code></pre>
+						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 					</li>
 				</ul>
@@ -1175,9 +1202,19 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/arizona/arizona.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/arizona/arizona.ts#L18">states/arizona/arizona.ts:18</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Generates random serial for <a href="https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Arizona#1956_to_present">Arizona</a></p>
+							</div>
+							<p><strong>Serial format</strong>: <code>ABC1234</code></p>
+							<p><strong>Serial range</strong>: <code>AAA00001</code> to <code>CPD0898</code></p>
+							<pre><code>import { arizona } from <span class="hljs-string">'license-plate-serial-generator'</span>
+
+<span class="hljs-function"><span class="hljs-title">arizona</span><span class="hljs-params">()</span></span> <span class="hljs-comment">// 'AUT8173'</span></code></pre>
+						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 					</li>
 				</ul>
@@ -1192,9 +1229,19 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/arkansas/arkansas.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/arkansas/arkansas.ts#L18">states/arkansas/arkansas.ts:18</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Generates random serial for <a href="https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Arkansas#1968_to_present">Arkansas</a></p>
+							</div>
+							<p><strong>Serial format</strong>: <code>123 ABC</code></p>
+							<p><strong>Serial range</strong>: <code>001 KPG</code> to <code>999 YFZ</code></p>
+							<pre><code>import { arkansas } from <span class="hljs-string">'license-plate-serial-generator'</span>
+
+<span class="hljs-function"><span class="hljs-title">arkansas</span><span class="hljs-params">()</span></span> <span class="hljs-comment">// '489 MKJ'</span></code></pre>
+						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 					</li>
 				</ul>
@@ -1209,7 +1256,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/california/california.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/california/california.ts#L4">states/california/california.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1226,7 +1273,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/colorado/colorado.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/colorado/colorado.ts#L4">states/colorado/colorado.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1243,7 +1290,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/connecticut/connecticut.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/connecticut/connecticut.ts#L5">states/connecticut/connecticut.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1260,7 +1307,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/delaware/delaware.ts:3</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/delaware/delaware.ts#L3">states/delaware/delaware.ts:3</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1277,7 +1324,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/florida/florida.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/florida/florida.ts#L5">states/florida/florida.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1294,7 +1341,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/georgia/georgia.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/georgia/georgia.ts#L4">states/georgia/georgia.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1311,7 +1358,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/hawaii/hawaii.ts:42</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/hawaii/hawaii.ts#L42">states/hawaii/hawaii.ts:42</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1328,7 +1375,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/idaho/idaho.ts:7</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/idaho/idaho.ts#L7">states/idaho/idaho.ts:7</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1345,7 +1392,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/illinois/illinois.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/illinois/illinois.ts#L4">states/illinois/illinois.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1362,7 +1409,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/indiana/indiana.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/indiana/indiana.ts#L4">states/indiana/indiana.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1379,7 +1426,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/iowa/iowa.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/iowa/iowa.ts#L5">states/iowa/iowa.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1396,7 +1443,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/kansas/kansas.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/kansas/kansas.ts#L5">states/kansas/kansas.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1413,7 +1460,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/kentucky/kentucky.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/kentucky/kentucky.ts#L5">states/kentucky/kentucky.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1430,7 +1477,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/louisiana/louisiana.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/louisiana/louisiana.ts#L5">states/louisiana/louisiana.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1447,7 +1494,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/maine/maine.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/maine/maine.ts#L5">states/maine/maine.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1464,7 +1511,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/maryland/maryland.ts:6</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/maryland/maryland.ts#L6">states/maryland/maryland.ts:6</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1481,7 +1528,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/massachusetts/massachusetts.ts:6</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/massachusetts/massachusetts.ts#L6">states/massachusetts/massachusetts.ts:6</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1498,7 +1545,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/michigan/michigan.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/michigan/michigan.ts#L5">states/michigan/michigan.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1515,7 +1562,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/minnesota/minnesota.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/minnesota/minnesota.ts#L5">states/minnesota/minnesota.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1532,7 +1579,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/mississippi/mississippi.ts:7</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/mississippi/mississippi.ts#L7">states/mississippi/mississippi.ts:7</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1549,7 +1596,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/missouri/missouri.ts:27</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/missouri/missouri.ts#L27">states/missouri/missouri.ts:27</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1566,7 +1613,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/montana/montana.ts:6</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/montana/montana.ts#L6">states/montana/montana.ts:6</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1583,7 +1630,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/nebraska/nebraska.ts:23</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/nebraska/nebraska.ts#L23">states/nebraska/nebraska.ts:23</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1600,7 +1647,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/nevada/nevada.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/nevada/nevada.ts#L5">states/nevada/nevada.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1617,7 +1664,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/new-hampshire/new-hampshire.ts:3</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/new-hampshire/new-hampshire.ts#L3">states/new-hampshire/new-hampshire.ts:3</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1634,7 +1681,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/new-jersey/new-jersey.ts:6</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/new-jersey/new-jersey.ts#L6">states/new-jersey/new-jersey.ts:6</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1651,7 +1698,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/new-mexico/new-mexico.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/new-mexico/new-mexico.ts#L4">states/new-mexico/new-mexico.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1668,7 +1715,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/new-york/new-york.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/new-york/new-york.ts#L5">states/new-york/new-york.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1685,7 +1732,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/north-carolina/north-carolina.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/north-carolina/north-carolina.ts#L4">states/north-carolina/north-carolina.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1702,7 +1749,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/north-dakota/north-dakota.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/north-dakota/north-dakota.ts#L4">states/north-dakota/north-dakota.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1719,7 +1766,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/ohio/ohio.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/ohio/ohio.ts#L5">states/ohio/ohio.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1736,7 +1783,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/oklahoma/oklahoma.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/oklahoma/oklahoma.ts#L5">states/oklahoma/oklahoma.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1753,7 +1800,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/oregon/oregon.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/oregon/oregon.ts#L5">states/oregon/oregon.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1770,7 +1817,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/pennsylvania/pennsylvania.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/pennsylvania/pennsylvania.ts#L4">states/pennsylvania/pennsylvania.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1787,7 +1834,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/rhode-island/rhode-island.ts:20</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/rhode-island/rhode-island.ts#L20">states/rhode-island/rhode-island.ts:20</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1804,7 +1851,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/south-carolina/south-carolina.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/south-carolina/south-carolina.ts#L5">states/south-carolina/south-carolina.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1821,7 +1868,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/south-dakota/south-dakota.ts:8</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/south-dakota/south-dakota.ts#L8">states/south-dakota/south-dakota.ts:8</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1838,7 +1885,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/tennessee/tennessee.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/tennessee/tennessee.ts#L5">states/tennessee/tennessee.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1855,7 +1902,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/texas/texas.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/texas/texas.ts#L4">states/texas/texas.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1872,7 +1919,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/utah/utah.ts:43</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/utah/utah.ts#L43">states/utah/utah.ts:43</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1889,7 +1936,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/vermont/vermont.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/vermont/vermont.ts#L5">states/vermont/vermont.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1906,7 +1953,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/virginia/virginia.ts:14</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/virginia/virginia.ts#L14">states/virginia/virginia.ts:14</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1923,7 +1970,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/washington/washington.ts:4</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/washington/washington.ts#L4">states/washington/washington.ts:4</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1940,7 +1987,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/washington-dc/washington-dc.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/washington-dc/washington-dc.ts#L5">states/washington-dc/washington-dc.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1957,7 +2004,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/west-virginia/west-virginia.ts:6</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/west-virginia/west-virginia.ts#L6">states/west-virginia/west-virginia.ts:6</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1974,7 +2021,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/wisconsin/wisconsin.ts:5</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/wisconsin/wisconsin.ts#L5">states/wisconsin/wisconsin.ts:5</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -1991,7 +2038,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in states/wyoming/wyoming.ts:6</li>
+								<li>Defined in <a href="https://github.com/ptrkcsk/license-plate-serial-generator/blob/d9a56ee/source/states/wyoming/wyoming.ts#L6">states/wyoming/wyoming.ts:6</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
