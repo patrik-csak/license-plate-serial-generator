@@ -13,4 +13,4 @@ npm i license-plate-serial-generator
 
 ## Usage
 
-[API documentation](https://ptrkcsk.github.io/BB26/)
+[API documentation](https://ptrkcsk.github.io/license-plate-serial-generator/)
