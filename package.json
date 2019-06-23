@@ -23,6 +23,9 @@
   "scripts": {
     "build": "tsc",
     "docs": "typedoc",
+    "docs:develop": "npm-run-all --parallel docs:serve docs:watch",
+    "docs:serve": "nodemon --ext html --watch docs --exec 'npx serve docs'",
+    "docs:watch": "nodemon --ext ts --watch source --exec 'npm run docs'",
     "prepublishOnly": "npm run build",
     "test": "jest",
     "test:coverage": "jest --coverage"
@@ -42,6 +45,9 @@
     "@types/lodash.shuffle": "^4.2.6",
     "jest": "^24.8.0",
     "lodash.range": "^3.2.0",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "serve": "^11.0.2",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.2.0",
     "typedoc": "^0.14.2",
