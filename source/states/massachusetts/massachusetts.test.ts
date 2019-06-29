@@ -1,6 +1,6 @@
 // Spec:
 // - Format: `1ABC 23`
-// - Range: `1AAA 10 - 9ZZZ 99`
+// - Range: `1AAA 10` to `9ZZZ 99`
 // - Letters `I`, `O`, `Q`, and `U` not used
 
 import massachusetts from './massachusetts'
