@@ -1,7 +1,7 @@
 {
   "name": "license-plate-serial-generator",
   "description": "License plate serial generator",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "repository": "github:ptrkcsk/license-plate-serial-generator",
   "author": "Patrik Csak <patrik@csak.email>",
   "license": "MIT",
