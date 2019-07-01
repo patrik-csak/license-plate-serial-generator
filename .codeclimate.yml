@@ -1,2 +1,2 @@
-- exclude_patterns:
-    - '**/*.test.ts'
+exclude_patterns:
+- '**/*.test.ts'
