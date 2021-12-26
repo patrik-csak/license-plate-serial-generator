@@ -1,16 +1,16 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
 /** @ignore */
 export function arch(): string {
-	const letter = bb26Random('V', 'Z');
+	const letter = randomBb26('V', 'Z');
 	const digits = randomNumericString(
 		letter === 'V' ? 215 : 1,
 		letter === 'Z' ? 1 : 999,
 		3
 	);
-	const letters = bb26Random(
+	const letters = randomBb26(
 		letter + digits === 'V215' ? 'RK' : 'AA',
 		letter + digits === 'Z001' ? 'AA' : 'AAA'
 	);
@@ -23,9 +23,9 @@ export function arch(): string {
 /** @ignore */
 export function god(): string {
 	let serial = randomNumericString(5);
-	serial += bb26Random(serial === '5' ? 'E' : 'Z');
+	serial += randomBb26(serial === '5' ? 'E' : 'Z');
 	serial += randomNumericString(serial === '5E' ? 1 : 9);
-	serial += bb26Random('AA', serial === '5E1' ? 'NZ' : 'AAA');
+	serial += randomBb26('AA', serial === '5E1' ? 'NZ' : 'AAA');
 
 	return serial;
 }
@@ -33,8 +33,8 @@ export function god(): string {
 /** @ignore */
 export function ski(): string {
 	const numbers = randomNumericString(1, 999);
-	const left = bb26Random('F') + numbers.slice(0, 2);
-	const right = numbers.slice(2) + bb26Random('AA', 'KB');
+	const left = randomBb26('F') + numbers.slice(0, 2);
+	const right = numbers.slice(2) + randomBb26('AA', 'KB');
 
 	return `${left} ${right}`;
 }

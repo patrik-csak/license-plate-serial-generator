@@ -2,6 +2,7 @@
 // - Format: `ABC 1234`
 // - Range: `FWA 1000` to `HUF 1415`
 
+import {range as bb26Range} from 'bb26';
 import ohio from './ohio';
 import {
 	getBeginningLetters,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Ohio', () => {
 	testSerialFormat(ohio(), /^[A-Z]{3} \d{4}$/);

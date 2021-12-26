@@ -2,8 +2,7 @@
 // - Format: `1AB2345`
 // - Range: `8CN0000` to `9DW2552`
 
-import {bb26Range} from 'bb26';
-
+import {range as bb26Range} from 'bb26';
 import maryland from './maryland';
 import {
 	getBeginningDigits,

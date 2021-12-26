@@ -1,5 +1,4 @@
-import {bb26Random} from 'bb26';
-
+import {random as randomBb26} from 'bb26';
 import {randomNumericString} from '../../lib';
 
 /**
@@ -16,7 +15,7 @@ import {randomNumericString} from '../../lib';
  * ```
  */
 export default function washingtonDc(): string {
-	const letters = bb26Random('FN', 'GB');
+	const letters = randomBb26('FN', 'GB');
 	const numbers = randomNumericString(
 		letters === 'FN' ? 4000 : 0,
 		letters === 'GB' ? 4718 : 9999

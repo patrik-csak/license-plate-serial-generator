@@ -2,7 +2,7 @@
 // - Format: `AB-1234`
 // - Range: `FN-4000` to `GB-4718`
 
-import {bb26Range} from 'bb26';
+import {range as bb26Range} from 'bb26';
 
 import washingtonDc from './washington-dc';
 import {

@@ -1,5 +1,5 @@
+import {random as randomBb26} from 'bb26';
 import {randomNumericString} from '../../lib';
-import {bb26Random} from 'bb26';
 
 /**
  * Generates random serial for [Washington](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Washington_(state)#1950_to_present)
@@ -15,7 +15,7 @@ import {bb26Random} from 'bb26';
  * ```
  */
 export default function washington(): string {
-	const letters = bb26Random('AAA', 'BKU');
+	const letters = randomBb26('AAA', 'BKU');
 	const digits = randomNumericString(9999);
 
 	return letters + digits;

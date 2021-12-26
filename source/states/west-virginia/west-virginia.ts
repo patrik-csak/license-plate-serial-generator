@@ -1,4 +1,4 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import randomInt from 'random-int';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
@@ -34,7 +34,7 @@ export default function westVirginia(): string {
 
 	string += randomItem(months);
 	string += randomItem(['', `${randomInt(9)}`]);
-	string += bb26Random(string.length === 2 ? 'Z' : 'ZZ');
+	string += randomBb26(string.length === 2 ? 'Z' : 'ZZ');
 	string += ' ';
 	string += randomNumericString(string.length === 4 ? 999 : 9999);
 

@@ -1,7 +1,7 @@
-import {bb26Random} from 'bb26';
+import arrayShuffle from 'array-shuffle';
+import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
-import arrayShuffle from 'array-shuffle';
 
 /**
  * Generates random serial for [Idaho](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Idaho#1968_to_present)
@@ -85,7 +85,7 @@ export default function idaho(): string {
 
 			switch (numbers.length) {
 				case 3: {
-					const letters = bb26Random('ZZ');
+					const letters = randomBb26('ZZ');
 					numbers = randomNumericString(999);
 
 					right =
@@ -97,7 +97,7 @@ export default function idaho(): string {
 				}
 
 				case 4: {
-					const letter = bb26Random('Z');
+					const letter = randomBb26('Z');
 					numbers = randomNumericString(9999);
 
 					right = arrayShuffle([letter, numbers]).join('');
@@ -122,7 +122,7 @@ export default function idaho(): string {
 
 			numbers = randomNumericString(randomItem([999, 9999]));
 
-			right = numbers.length === 3 ? bb26Random('Z') + numbers : numbers;
+			right = numbers.length === 3 ? randomBb26('Z') + numbers : numbers;
 
 			break;
 		}

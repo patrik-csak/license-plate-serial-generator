@@ -4,8 +4,7 @@
 //   - `AB-12`, `AB-123`
 // - Range:
 
-import {bb26Range} from 'bb26';
-
+import {range as bb26Range} from 'bb26';
 import rhodeIsland, {alphaNumeric, numeric} from './rhode-island';
 import {
 	getBeginningLetters,

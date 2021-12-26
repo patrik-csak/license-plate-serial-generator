@@ -1,4 +1,4 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import randomInt from 'random-int';
 import {randomNumericString} from '../../lib';
 
@@ -17,7 +17,7 @@ export default function montana(): string {
 	// TODO: Weigh county choice by population
 	const county = randomInt(1, 56).toString();
 	const numbers = randomNumericString(county.length === 1 ? 99999 : 9999);
-	const letter = bb26Random('Z');
+	const letter = randomBb26('Z');
 
 	return `${county}-${numbers}${letter}`;
 }

@@ -2,13 +2,13 @@
 // - Format: `Z12 3BC`
 // - Range: `Z00 0AA` to `Z89 0FW`
 
+import {range as bb26Range} from 'bb26';
 import florida from './florida';
 import {
 	getEndingLetters,
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 const getDigits = (serial: string) => serial.slice(1, 3) + serial[4];
 

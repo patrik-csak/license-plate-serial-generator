@@ -1,4 +1,4 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
@@ -17,7 +17,7 @@ import {randomNumericString} from '../../lib';
  */
 export default function maryland(): string {
 	const digit = randomItem([8, 9]);
-	const letters = bb26Random(
+	const letters = randomBb26(
 		digit === 8 ? 'CN' : 'AA',
 		digit === 9 ? 'DW' : 'ZZ'
 	);

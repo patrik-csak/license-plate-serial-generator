@@ -2,6 +2,7 @@
 // - Format: `ABC 123`
 // - Range: `GXV 200` to `IBB 999`
 
+import {range as bb26Range} from 'bb26';
 import iowa from './iowa';
 import {
 	getBeginningLetters,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Iowa', () => {
 	testSerialFormat(iowa(), /^[A-Z]{3} \d{3}$/);

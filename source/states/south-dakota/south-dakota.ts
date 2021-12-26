@@ -1,4 +1,4 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import getRange from 'get-range';
 import randomInt from 'random-int';
 import randomItem from 'random-item';
@@ -27,7 +27,7 @@ export default function southDakota(): string {
 	const right = randomNumericString(999);
 	let left = `${county}`;
 
-	left += bb26Random('Z');
+	left += randomBb26('Z');
 
 	if (left.length === 2) left += randomInt(9);
 

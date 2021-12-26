@@ -2,6 +2,7 @@
 // - Format: `AB-12345`, with interpunct for dash
 // - Range: `AA-00001` to `AV-00042`
 
+import {range as bb26Range} from 'bb26';
 import connecticut from './connecticut';
 import interpunct from '../../lib/interpunct';
 import {
@@ -9,7 +10,6 @@ import {
 	getEndingDigits,
 	testSerial
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Connecticut', () => {
 	testSerial('Should be the correct format', connecticut(), (serial) => {

@@ -1,4 +1,4 @@
-import {bb26Range} from 'bb26';
+import {range as bb26Range} from 'bb26';
 
 /** @ignore */
 export interface County {

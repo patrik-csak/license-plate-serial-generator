@@ -1,4 +1,4 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
 import counties from './mississippi-counties';
 import {randomNumericString} from '../../lib';
@@ -17,7 +17,7 @@ import {randomNumericString} from '../../lib';
 export default function mississippi(): string {
 	// TODO: Weigh county choice by population
 	const county = randomItem(randomItem(counties).codes);
-	const letters = county + bb26Random('Z');
+	const letters = county + randomBb26('Z');
 	const numbers = randomNumericString(9999);
 
 	return `${letters} ${numbers}`;

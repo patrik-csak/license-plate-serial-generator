@@ -1,5 +1,4 @@
-import {bb26Random} from 'bb26';
-
+import {random as randomBb26} from 'bb26';
 import {randomNumericString} from '../../lib';
 
 /**
@@ -16,7 +15,7 @@ import {randomNumericString} from '../../lib';
  * ```
  */
 export default function arizona(): string {
-	const letters = bb26Random('AAA', 'CNY');
+	const letters = randomBb26('AAA', 'CNY');
 	const numbers = randomNumericString(1, letters === 'CNX' ? 1511 : 9999);
 
 	return letters.toUpperCase() + numbers;

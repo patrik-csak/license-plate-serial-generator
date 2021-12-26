@@ -1,5 +1,4 @@
-import {bb26Random} from 'bb26';
-
+import {random as randomBb26} from 'bb26';
 import {randomNumericString} from '../../lib';
 
 /**
@@ -16,7 +15,7 @@ import {randomNumericString} from '../../lib';
  * ```
  */
 export default function wisconsin(): string {
-	const letters = bb26Random('AAA', 'AFR');
+	const letters = randomBb26('AAA', 'AFR');
 	const numbers = randomNumericString(
 		letters === 'AAA' ? 1001 : 0,
 		letters === 'AFR' ? 2743 : 9999

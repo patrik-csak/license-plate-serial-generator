@@ -1,11 +1,11 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import getRange from 'get-range';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
 /** @ignore */
 export function countyCoded(county: number): string {
-	const letters = `${county}-${bb26Random('ZZ')}`;
+	const letters = `${county}-${randomBb26('ZZ')}`;
 	const digits = randomNumericString(10 ** (7 - letters.length) - 1);
 
 	return letters + digits;
@@ -13,7 +13,7 @@ export function countyCoded(county: number): string {
 
 /** @ignore */
 export function abc123(): string {
-	const letters = bb26Random('UMA', 'WDH');
+	const letters = randomBb26('UMA', 'WDH');
 	const numbers = randomNumericString(999);
 
 	return `${letters} ${numbers}`;

@@ -1,5 +1,4 @@
-import {bb26Random} from 'bb26';
-
+import {random as randomBb26} from 'bb26';
 import {interpunct, randomNumericString} from '../../lib';
 
 /**
@@ -16,7 +15,7 @@ import {interpunct, randomNumericString} from '../../lib';
  * ```
  */
 export default function connecticut(): string {
-	const letters = bb26Random('AA', 'AW');
+	const letters = randomBb26('AA', 'AW');
 	const numbers = randomNumericString(1, letters === 'AV' ? 42 : 99999, 5);
 
 	return letters + interpunct + numbers;

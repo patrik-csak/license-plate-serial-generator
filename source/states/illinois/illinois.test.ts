@@ -2,7 +2,7 @@
 // - Format: `AB 12345`
 // - Range: `AQ 11001` to `BP 20703`
 
-import {bb26Range} from 'bb26';
+import {range as bb26Range} from 'bb26';
 
 import illinois from './illinois';
 import {

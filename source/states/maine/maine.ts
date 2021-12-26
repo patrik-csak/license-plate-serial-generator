@@ -1,4 +1,4 @@
-import {bb26Range} from 'bb26';
+import {range as bb26Range} from 'bb26';
 import randomInt from 'random-int';
 import randomItem from 'random-item';
 

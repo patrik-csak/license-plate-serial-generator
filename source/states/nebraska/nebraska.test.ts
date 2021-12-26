@@ -8,7 +8,7 @@
 //   - `XX-A123`
 //   - `XX-AB12`
 
-import {bb26Range} from 'bb26';
+import {range as bb26Range} from 'bb26';
 import randomInt from 'random-int';
 import nebraska, {abc123, countyCoded} from './nebraska';
 import {

@@ -5,9 +5,9 @@
 //   - `GAA 100` to `GZZ 999`, or
 //   - `KAA 100` to `KDY 999` (as of 2019-04-10)
 
+import {range as bb26Range} from 'bb26';
 import alaska from './alaska';
 import {testSerial, testSerialFormat} from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Alaska', () => {
 	testSerialFormat(alaska(), /^[A-Z]{3} \d{3}$/);

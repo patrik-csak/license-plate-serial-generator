@@ -1,5 +1,4 @@
-import {bb26Random} from 'bb26';
-
+import {random as randomBb26} from 'bb26';
 import {randomNumericString} from '../../lib';
 
 /**
@@ -16,7 +15,7 @@ import {randomNumericString} from '../../lib';
  * ```
  */
 export default function arkansas(): string {
-	const letters: string = bb26Random('KPG', 'YGA');
+	const letters: string = randomBb26('KPG', 'YGA');
 	const numbers: string = randomNumericString(1, 999);
 
 	return `${numbers} ${letters}`;

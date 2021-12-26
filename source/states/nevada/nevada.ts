@@ -1,5 +1,4 @@
-import {bb26Random} from 'bb26';
-
+import {random as randomBb26} from 'bb26';
 import {interpunct, randomNumericString} from '../../lib';
 
 /**
@@ -17,7 +16,7 @@ import {interpunct, randomNumericString} from '../../lib';
  */
 export default function nevada() {
 	const left = randomNumericString(1, 999);
-	const letter = bb26Random('E');
+	const letter = randomBb26('E');
 	const right = randomNumericString(letter === 'e' ? 49 : 99);
 
 	return left + interpunct + letter + right;

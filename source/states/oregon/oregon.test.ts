@@ -2,6 +2,7 @@
 // - Format: `123 ABC`
 // - Range: `001 BAA` to `006 LPV`
 
+import {range as bb26Range} from 'bb26';
 import oregon from './oregon';
 import {
 	getBeginningDigits,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Oregon', () => {
 	testSerialFormat(oregon(), /^\d{3} [A-Z]{3}$/);

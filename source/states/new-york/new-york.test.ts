@@ -2,6 +2,7 @@
 // - Format: `ABC-1234`
 // - Range: `FAA-1000` to `JJS-6999`
 
+import {range as bb26Range} from 'bb26';
 import newYork from './new-york';
 import {
 	getBeginningLetters,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('New York', () => {
 	testSerialFormat(newYork(), /^[A-Z]{3}-\d{4}$/);

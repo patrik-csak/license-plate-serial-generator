@@ -2,13 +2,13 @@
 // - Format: `ABC-D12`
 // - Range: AEW-T01 to BFM-Y21
 
+import {range as bb26Range} from 'bb26';
 import colorado from './colorado';
 import {
 	getEndingDigits,
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 const getLetters = (serial: string) => serial.slice(0, 3) + serial[4];
 

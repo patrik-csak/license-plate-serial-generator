@@ -1,4 +1,4 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
@@ -36,8 +36,8 @@ const months: Month[] = [
  */
 export default function missouri(): string {
 	const month = randomItem(randomItem(months).codes);
-	const left = month + bb26Random('Z') + randomNumericString(9);
-	const right = bb26Random('Z') + randomNumericString(9) + bb26Random('Z');
+	const left = month + randomBb26('Z') + randomNumericString(9);
+	const right = randomBb26('Z') + randomNumericString(9) + randomBb26('Z');
 
 	return `${left} ${right}`;
 }

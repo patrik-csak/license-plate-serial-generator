@@ -2,6 +2,7 @@
 // - Format: `ABC1234`
 // - Range: `AAA0000` to `BPY9526`
 
+import {range as bb26Range} from 'bb26';
 import washington from './washington';
 import {
 	getBeginningLetters,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Washington', () => {
 	testSerialFormat(washington(), /^[A-Z]{3}\d{4}$/);

@@ -9,8 +9,7 @@
 //   - Format: 'A12 3BC'
 //   - Range: 'A00 1AA' to 'F76 4TE'
 
-import {bb26Range} from 'bb26';
-
+import {range as bb26Range} from 'bb26';
 import utah, {arch, god, ski} from './utah';
 import {
 	getBeginningLetters,

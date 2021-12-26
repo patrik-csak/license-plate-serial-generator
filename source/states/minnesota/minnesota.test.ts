@@ -2,8 +2,7 @@
 // - Format: `ABC-123`
 // - Range: `AAA-001` to `DBY-020`
 
-import {bb26Range} from 'bb26';
-
+import {range as bb26Range} from 'bb26';
 import minnesota from './minnesota';
 import {
 	getBeginningLetters,

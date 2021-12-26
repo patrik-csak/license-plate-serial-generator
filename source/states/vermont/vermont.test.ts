@@ -2,8 +2,7 @@
 // - Format: `ABC 123`
 // - Range: `AAB 100` to `HNP 223`
 
-import {bb26Range} from 'bb26';
-
+import {range as bb26Range} from 'bb26';
 import vermont from './vermont';
 import {
 	getBeginningLetters,

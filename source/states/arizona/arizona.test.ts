@@ -2,6 +2,7 @@
 // - Format: `ABC1234`
 // - Range: `AAA0001` to `CNX1511` (as of 2019-05-28)
 
+import {range as bb26Range} from 'bb26';
 import arizona from './arizona';
 import {
 	getBeginningLetters,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Arizona', () => {
 	testSerialFormat(arizona(), /^[A-Z]{3}\d{4}$/);

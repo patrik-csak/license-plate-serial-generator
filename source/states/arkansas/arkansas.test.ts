@@ -2,6 +2,7 @@
 // - Format: `123 ABC`
 // - Range: `001 KPG` to `999 YFZ`
 
+import {range as bb26Range} from 'bb26';
 import arkansas from './arkansas';
 import {
 	getBeginningDigits,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import bb26Range from 'bb26/dist/bb26-range';
 
 describe('Arkansas', () => {
 	testSerialFormat(arkansas(), /^\d{3} [A-Z]{3}$/);

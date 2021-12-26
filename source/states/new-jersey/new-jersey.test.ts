@@ -3,8 +3,7 @@
 // - Range: `A10-EFF` to `C62-LKA`
 // - `I`, `O`, `Q` not used in any position
 
-import {bb26Range} from 'bb26';
-
+import {range as bb26Range} from 'bb26';
 import newJersey from './new-jersey';
 import {
 	getBeginningLetters,

@@ -1,4 +1,4 @@
-import {bb26Random} from 'bb26';
+import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
@@ -43,7 +43,7 @@ export default function virginia(): string {
 	];
 	const range = randomItem(ranges);
 
-	const letters = bb26Random(range.lettersStart, range.lettersEnd);
+	const letters = randomBb26(range.lettersStart, range.lettersEnd);
 	const numbers = randomNumericString(
 		letters === range.lettersStart ? range.digitsStart : 0,
 		letters === range.lettersEnd ? range.digitsEnd : 9999

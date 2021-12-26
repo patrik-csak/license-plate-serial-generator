@@ -2,6 +2,7 @@
 // Format: `ABC-1234`
 // Range: `KLF-0000 to LBP-1791`
 
+import {range as bb26Range} from 'bb26';
 import pennsylvania from './pennsylvania';
 import {
 	getBeginningLetters,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Pennsylvania', () => {
 	testSerialFormat(pennsylvania(), /^[A-Z]{3}-\d{4}$/);

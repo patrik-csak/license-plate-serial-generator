@@ -2,7 +2,7 @@
 // - Format: `ABC1234`
 // - Range: `PFA0000` to `PLZ9999`
 
-import {bb26Range} from 'bb26';
+import {range as bb26Range} from 'bb26';
 
 import georgia from './georgia';
 import {

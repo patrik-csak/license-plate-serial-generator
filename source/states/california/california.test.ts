@@ -2,9 +2,9 @@
 // - Format: `1ABC123`
 // - Range: `6TPW000` to `8KPP139`
 
+import {range as bb26Range} from 'bb26';
 import california from './california';
 import {testSerial, testSerialFormat} from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('California', () => {
 	testSerialFormat(california(), /^\d[A-Z]{3}\d{3}$/);

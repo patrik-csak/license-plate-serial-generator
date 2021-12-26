@@ -1,10 +1,10 @@
-import {bb26Random, bb26Range} from 'bb26';
+import {random as randomBb26, range as bb26Range} from 'bb26';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
 /** @ignore */
 export function hawaiiCounty(): string {
-	const letters = randomItem(['H', 'Z']) + bb26Random('AA', 'AAA');
+	const letters = randomItem(['H', 'Z']) + randomBb26('AA', 'AAA');
 	const digits = randomNumericString(999);
 
 	return `${letters} ${digits}`;
@@ -24,7 +24,7 @@ export function honoluluCounty(): string {
 
 /** @ignore */
 export function kauaiCounty(): string {
-	const letters = bb26Random('AA', 'AAA');
+	const letters = randomBb26('AA', 'AAA');
 	const numbers = randomNumericString(999);
 
 	return `K${letters} ${numbers}`;
@@ -33,7 +33,7 @@ export function kauaiCounty(): string {
 /** @ignore */
 export function mauiCounty(): string {
 	const county = randomItem(['M', 'L']);
-	const letters = bb26Random('AA', 'AAA');
+	const letters = randomBb26('AA', 'AAA');
 	const numbers = randomNumericString(999);
 
 	return `${county}${letters} ${numbers}`;

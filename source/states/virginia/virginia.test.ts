@@ -4,6 +4,7 @@
 //   - `VAA-1000` to `VZZ-9999`
 //   - `UZZ-9999` to `UPA-2674` (progressing backwards)
 
+import {range as bb26Range} from 'bb26';
 import virginia from './virginia';
 import {
 	getBeginningLetters,
@@ -11,7 +12,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Virginia', () => {
 	testSerialFormat(virginia(), /^[A-Z]{3}-\d{4}$/);

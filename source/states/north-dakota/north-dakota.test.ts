@@ -2,6 +2,7 @@
 // - Format: `123 ABC`
 // - Range: `000 BTR` to `825 CNK`
 
+import {range as bb26Range} from 'bb26';
 import northDakota from './north-dakota';
 import {
 	getBeginningDigits,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('North Dakota', () => {
 	testSerialFormat(northDakota(), /^\d{3} [A-Z]{3}$/);

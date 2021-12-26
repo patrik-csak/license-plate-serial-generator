@@ -1,5 +1,4 @@
-import {bb26Random} from 'bb26';
-
+import {random as randomBb26} from 'bb26';
 import {randomNumericString} from '../../lib';
 
 /**
@@ -16,7 +15,7 @@ import {randomNumericString} from '../../lib';
 export default function alabama(): string {
 	// TODO: Weigh county code choice based on population
 	const county = randomNumericString(1, 67);
-	const letters = bb26Random('AA', 'ZZ');
+	const letters = randomBb26('AA', 'ZZ');
 	const digits = randomNumericString(county.length === 2 ? 9999 : 999);
 
 	return county + letters + digits;

@@ -2,8 +2,7 @@
 // - Format: `123 ABC`
 // - Range: `000 AAA` to `999 DEV`
 
-import {bb26Range} from 'bb26';
-
+import {range as bb26Range} from 'bb26';
 import louisiana from './louisiana';
 import {
 	getBeginningDigits,

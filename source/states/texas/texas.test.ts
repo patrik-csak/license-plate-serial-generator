@@ -2,6 +2,7 @@
 // - Format: `ABC-1234`
 // - Range: `BBB-0001` to `MCZ-9999`
 
+import {range as bb26Range} from 'bb26';
 import texas from './texas';
 import {
 	getBeginningLetters,
@@ -9,7 +10,6 @@ import {
 	testSerial,
 	testSerialFormat
 } from '../../../tests/helpers';
-import {bb26Range} from 'bb26';
 
 describe('Texas', () => {
 	testSerialFormat(texas(), /^[A-Z]{3}-\d{4}$/);
