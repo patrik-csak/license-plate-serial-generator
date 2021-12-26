@@ -1,6 +1,6 @@
 import {bb26Random} from 'bb26';
-import random from 'lodash.random';
 import range from 'lodash.range';
+import randomInt from 'random-int';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
@@ -27,7 +27,7 @@ export default function southDakota(): string {
 
 	left += bb26Random('Z');
 
-	if (left.length === 2) left += random(9);
+	if (left.length === 2) left += randomInt(9);
 
 	return `${left} ${right}`;
 }

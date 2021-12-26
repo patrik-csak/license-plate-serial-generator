@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/unified-signatures, no-redeclare */
 
-import random from 'lodash.random';
+import randomInt from 'random-int';
 
 function randomNumericString(upper: number): string;
 function randomNumericString(lower: number, upper: number): string;
@@ -18,7 +18,7 @@ function randomNumericString(
 ): string {
 	const _lower = upper ? lower : 0;
 	const _upper = upper ?? lower;
-	const number = random(_lower, _upper);
+	const number = randomInt(_lower, _upper);
 	length = length ?? `${_upper}`.length;
 
 	return `${number}`.padStart(length, '0');

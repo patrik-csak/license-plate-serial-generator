@@ -9,8 +9,7 @@
 //   - `XX-AB12`
 
 import {bb26Range} from 'bb26';
-import random from 'lodash.random';
-
+import randomInt from 'random-int';
 import nebraska, {abc123, countyCoded} from './nebraska';
 import {
 	getBeginningDigits,
@@ -47,7 +46,7 @@ describe('Nebraska', () => {
 	});
 
 	describe('County-coded', () => {
-		const randomCounty = () => random(1, 93);
+		const randomCounty = () => randomInt(1, 93);
 
 		const county = randomCounty();
 

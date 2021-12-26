@@ -1,5 +1,5 @@
 import {bb26Range} from 'bb26';
-import random from 'lodash.random';
+import randomInt from 'random-int';
 import randomItem from 'random-item';
 
 /**
@@ -16,7 +16,7 @@ import randomItem from 'random-item';
  * ```
  */
 export default function maine(): string {
-	const digits = random(5252);
+	const digits = randomInt(5252);
 
 	const validLetters = bb26Range(
 		digits === 1 ? 'GA' : 'AA',
