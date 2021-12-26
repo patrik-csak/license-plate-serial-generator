@@ -39,7 +39,7 @@
     "random-item": "^3.1.0"
   },
   "devDependencies": {
-    "@sindresorhus/tsconfig": "^0.4.0",
+    "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^24.0.13",
     "@types/lodash.random": "^3.2.6",
     "@types/lodash.range": "^3.2.6",
