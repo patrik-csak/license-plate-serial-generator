@@ -1,5 +1,5 @@
 import {bb26Random} from 'bb26';
-import range from 'lodash.range';
+import getRange from 'get-range';
 import randomInt from 'random-int';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
@@ -21,7 +21,9 @@ import {randomNumericString} from '../../lib';
  * ```
  */
 export default function southDakota(): string {
-	const county = randomItem(range(1, 66).concat(67));
+	const county = randomItem(
+		Array.from(getRange({start: 1, end: 66})).concat(67)
+	);
 	const right = randomNumericString(999);
 	let left = `${county}`;
 

@@ -2,13 +2,13 @@
 // - Format: 0AB1234 or 00AB123
 // - `0` or `00` is county code
 
-import range = require('lodash.range');
+import getRange from 'get-range';
 import alabama from './alabama';
 import testSerial from '../../../tests/helpers/test-serial';
 import getBeginningDigits from '../../../tests/helpers/get-beginning-digits';
 
 // https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Alabama#County_coding
-const countyCodes = range(1, 68).concat(70, 80);
+const countyCodes = Array.from(getRange({start: 1, end: 68})).concat(70, 80);
 
 describe('Alabama', () => {
 	testSerial('Should start with county code', alabama(), (serial) => {

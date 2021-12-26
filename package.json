@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "bb26": "^0.3.1",
-    "lodash.range": "^3.2.0",
+    "get-range": "^2.0.1",
     "lodash.shuffle": "^4.2.0",
     "random-int": "^2.0.1",
     "random-item": "^3.1.0"

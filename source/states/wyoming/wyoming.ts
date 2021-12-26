@@ -1,4 +1,4 @@
-import range from 'lodash.range';
+import getRange from 'get-range';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
@@ -18,7 +18,9 @@ import {randomNumericString} from '../../lib';
  */
 export default function wyoming(): string {
 	// TODO: Weigh county choice based on population
-	const county = randomItem(range(1, 23).concat(99));
+	const county = randomItem(
+		Array.from(getRange({start: 1, end: 23})).concat(99)
+	);
 	const digits = randomNumericString(99999);
 
 	return `${county}-${digits}`;

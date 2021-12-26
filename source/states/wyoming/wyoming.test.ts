@@ -4,8 +4,7 @@
 //   - `11-12345`
 // - First digit/digits county code
 
-import range from 'lodash.range';
-
+import getRange from 'get-range';
 import wyoming from './wyoming';
 import {
 	getBeginningDigits,
@@ -23,7 +22,9 @@ describe('Wyoming', () => {
 		expect(countyCode.length).toBeGreaterThanOrEqual(1);
 		expect(countyCode.length).toBeLessThanOrEqual(2);
 
-		const validDigits: number[] = range(1, 23).concat(99);
+		const validDigits: number[] = Array.from(
+			getRange({start: 1, end: 23})
+		).concat(99);
 
 		expect(validDigits).toContain(Number(countyCode));
 	});

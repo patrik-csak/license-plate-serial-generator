@@ -1,5 +1,5 @@
 import {bb26Random} from 'bb26';
-import range from 'lodash.range';
+import getRange from 'get-range';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
@@ -46,7 +46,7 @@ export function abc123(): string {
  * ```
  */
 export default function nebraska(): string {
-	const counties = range(1, 93);
+	const counties = Array.from(getRange({start: 1, end: 93}));
 	// TODO: Weigh county choice by population
 	const county = randomItem(counties);
 
