@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [South Carolina](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_South_Carolina#1976_to_present)
@@ -15,9 +15,9 @@ import { randomNumericString } from '../../lib'
  * southCarolina() // 'OVL 579'
  * ```
  */
-export default function southCarolina (): string {
-  const letters = bb26Random('LZD', 'PVY')
-  const numbers = randomNumericString(letters === 'LZD' ? 101 : 0, 999)
+export default function southCarolina(): string {
+	const letters = bb26Random('LZD', 'PVY');
+	const numbers = randomNumericString(letters === 'LZD' ? 101 : 0, 999);
 
-  return `${letters} ${numbers}`
+	return `${letters} ${numbers}`;
 }

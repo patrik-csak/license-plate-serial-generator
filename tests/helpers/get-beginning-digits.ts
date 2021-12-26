@@ -1,5 +1,5 @@
-import getFirstMatchingPattern from './get-first-matching-pattern'
+import getFirstMatchingPattern from './get-first-matching-pattern';
 
-export default function getBeginningDigits (string: string) {
-  return getFirstMatchingPattern(string, /^\d+/)
+export default function getBeginningDigits(string: string) {
+	return getFirstMatchingPattern(string, /^\d+/);
 }

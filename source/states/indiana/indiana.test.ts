@@ -4,9 +4,9 @@
 //   - `123AB`
 //   - `123ABC`
 
-import indiana from './indiana'
-import { testSerialFormat } from '../../../tests/helpers'
+import indiana from './indiana';
+import {testSerialFormat} from '../../../tests/helpers';
 
 describe('Indiana', () => {
-  testSerialFormat(indiana(), /^\d{3}[A-Z]{1,3}$/)
-})
+	testSerialFormat(indiana(), /^\d{3}[A-Z]{1,3}$/);
+});

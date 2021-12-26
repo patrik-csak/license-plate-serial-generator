@@ -2,33 +2,34 @@
 // - Format: `ABC 123`
 // - Range: `LZD 101` to `RFE 478`
 
-import southCarolina from './south-carolina'
+import southCarolina from './south-carolina';
 import {
-  getBeginningLetters, getEndingDigits,
-  testSerial,
-  testSerialFormat,
-} from '../../../tests/helpers'
-import { bb26Range } from 'bb26'
+	getBeginningLetters,
+	getEndingDigits,
+	testSerial,
+	testSerialFormat
+} from '../../../tests/helpers';
+import {bb26Range} from 'bb26';
 
 describe('South Carolina', () => {
-  testSerialFormat(southCarolina(), /^[A-Z]+ \d{3}$/)
+	testSerialFormat(southCarolina(), /^[A-Z]+ \d{3}$/);
 
-  testSerial('Should contain valid letters', southCarolina(), serial => {
-    const letters = getBeginningLetters(serial)
+	testSerial('Should contain valid letters', southCarolina(), (serial) => {
+		const letters = getBeginningLetters(serial);
 
-    expect(letters.length).toBe(3)
+		expect(letters.length).toBe(3);
 
-    const validLetters = bb26Range('LZD', 'RFF')
+		const validLetters = bb26Range('LZD', 'RFF');
 
-    expect(validLetters).toContain(letters)
-  })
+		expect(validLetters).toContain(letters);
+	});
 
-  testSerial('Should contain valid digits', southCarolina(), serial => {
-    const digits = getEndingDigits(serial)
-    const letters = getBeginningLetters(serial)
+	testSerial('Should contain valid digits', southCarolina(), (serial) => {
+		const digits = getEndingDigits(serial);
+		const letters = getBeginningLetters(serial);
 
-    expect(digits.length).toBe(3)
-    expect(+digits).toBeGreaterThanOrEqual(letters === 'LZD' ? 101 : 0)
-    expect(+digits).toBeLessThanOrEqual(letters === 'RFE' ? 478 : 999)
-  })
-})
+		expect(digits.length).toBe(3);
+		expect(Number(digits)).toBeGreaterThanOrEqual(letters === 'LZD' ? 101 : 0);
+		expect(Number(digits)).toBeLessThanOrEqual(letters === 'RFE' ? 478 : 999);
+	});
+});

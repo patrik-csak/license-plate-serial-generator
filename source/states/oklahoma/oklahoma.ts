@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Oklahoma](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Oklahoma#1979_to_present)
@@ -15,9 +15,9 @@ import { randomNumericString } from '../../lib'
  * oklahoma() // 'HHQ-386'
  * ```
  */
-export default function oklahoma (): string {
-  const letters = bb26Random('AAA', 'JRL')
-  const numbers = randomNumericString(1, 999)
+export default function oklahoma(): string {
+	const letters = bb26Random('AAA', 'JRL');
+	const numbers = randomNumericString(1, 999);
 
-  return `${letters}-${numbers}`.toUpperCase()
+	return `${letters}-${numbers}`.toUpperCase();
 }

@@ -1,7 +1,8 @@
-export default function getFirstMatchingPattern (
-  string: string, pattern: RegExp,
+export default function getFirstMatchingPattern(
+	string: string,
+	pattern: RegExp
 ): string {
-  const match = string.match(pattern)
+	const match = string.match(pattern);
 
-  return match ? match[0] : ''
+	return match ? match[0] : '';
 }

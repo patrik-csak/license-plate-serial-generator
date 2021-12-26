@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Tennessee](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Tennessee#1962_to_present)
@@ -15,9 +15,9 @@ import { randomNumericString } from '../../lib'
  * tennessee() // '26E 391'
  * ```
  */
-export default function tennessee (): string {
-  const letters = bb26Random('BBB', 'BTG')
-  const numbers = randomNumericString(1, 999)
+export default function tennessee(): string {
+	const letters = bb26Random('BBB', 'BTG');
+	const numbers = randomNumericString(1, 999);
 
-  return `${letters}-${numbers}`
+	return `${letters}-${numbers}`;
 }

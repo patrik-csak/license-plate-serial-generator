@@ -1,4 +1,4 @@
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [New Hampshire](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_New_Hampshire#1973_to_present)
@@ -13,8 +13,8 @@ import { randomNumericString } from '../../lib'
  * newHampshire() // '216 6629'
  * ```
  */
-export default function newHampshire () {
-  const numbers = randomNumericString(1000000, 4585718)
+export default function newHampshire() {
+	const numbers = randomNumericString(1000000, 4585718);
 
-  return numbers.slice(0, 3) + ' ' + numbers.slice(3)
+	return numbers.slice(0, 3) + ' ' + numbers.slice(3);
 }

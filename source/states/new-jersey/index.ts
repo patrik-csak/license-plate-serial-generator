@@ -1,1 +1,1 @@
-export { default as newJersey } from './new-jersey'
+export {default as newJersey} from './new-jersey';

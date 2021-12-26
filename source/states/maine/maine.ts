@@ -1,6 +1,6 @@
-import { bb26Range } from 'bb26'
-import random from 'lodash.random'
-import sample from 'lodash.sample'
+import {bb26Range} from 'bb26';
+import random from 'lodash.random';
+import sample from 'lodash.sample';
 
 /**
  * Generates random serial for [Maine](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Maine#1950_to_present)
@@ -15,16 +15,15 @@ import sample from 'lodash.sample'
  * maine() // '1837 AJ'
  * ```
  */
-export default function maine (): string {
-  const digits = random(5252)
+export default function maine(): string {
+	const digits = random(5252);
 
-  const validLetters = bb26Range(
-    digits === 1 ? 'GA' : 'AA',
-    digits === 5252 ? 'XL' : 'AAA',
-  )
-    .filter(letters => !letters.includes('O'))
+	const validLetters = bb26Range(
+		digits === 1 ? 'GA' : 'AA',
+		digits === 5252 ? 'XL' : 'AAA'
+	).filter((letters) => !letters.includes('O'));
 
-  const letters = sample(validLetters)
+	const letters = sample(validLetters);
 
-  return `${digits} ${letters}`
+	return `${digits} ${letters}`;
 }

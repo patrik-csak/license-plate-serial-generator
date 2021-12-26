@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Iowa](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Iowa#1972_to_present)
@@ -15,11 +15,11 @@ import { randomNumericString } from '../../lib'
  * iowa() // 'HML 979'
  * ```
  */
-export default function iowa (): string {
-  const letters = bb26Random('GXV', 'IBC')
-  const lower = 0
-  const upper = letters === 'hah' ? 57 : 999
-  const numbers = randomNumericString(lower, upper, 3)
+export default function iowa(): string {
+	const letters = bb26Random('GXV', 'IBC');
+	const lower = 0;
+	const upper = letters === 'hah' ? 57 : 999;
+	const numbers = randomNumericString(lower, upper, 3);
 
-  return `${letters} ${numbers}`
+	return `${letters} ${numbers}`;
 }

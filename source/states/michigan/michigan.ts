@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Michigan](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Michigan#1971_to_present)
@@ -15,9 +15,9 @@ import { randomNumericString } from '../../lib'
  * michigan() // 'DYI 6070'
  * ```
  */
-export default function michigan (): string {
-  const letters = bb26Random('DAA', 'ECR')
-  const numbers = randomNumericString(9999)
+export default function michigan(): string {
+	const letters = bb26Random('DAA', 'ECR');
+	const numbers = randomNumericString(9999);
 
-  return `${letters} ${numbers}`
+	return `${letters} ${numbers}`;
 }

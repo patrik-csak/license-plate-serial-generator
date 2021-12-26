@@ -1,9 +1,9 @@
-import random from 'lodash.random'
-import range from 'lodash.range'
-import sample from 'lodash.sample'
+import random from 'lodash.random';
+import range from 'lodash.range';
+import sample from 'lodash.sample';
 
-import { randomNumericString } from '../../lib'
-import { bb26Random } from 'bb26'
+import {randomNumericString} from '../../lib';
+import {bb26Random} from 'bb26';
 
 /**
  * Generates random serial for [South Dakota](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_South_Dakota#1976_to_present)
@@ -21,14 +21,14 @@ import { bb26Random } from 'bb26'
  * southDakota() // '11K 222'
  * ```
  */
-export default function southDakota (): string {
-  const county = sample(range(1, 66).concat(67))
-  const right = randomNumericString(999)
-  let left = `${county}`
+export default function southDakota(): string {
+	const county = sample(range(1, 66).concat(67));
+	const right = randomNumericString(999);
+	let left = `${county}`;
 
-  left += bb26Random('Z')
+	left += bb26Random('Z');
 
-  if (left.length === 2) left += random(9)
+	if (left.length === 2) left += random(9);
 
-  return `${left} ${right}`
+	return `${left} ${right}`;
 }

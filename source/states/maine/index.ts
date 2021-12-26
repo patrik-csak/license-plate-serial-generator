@@ -1,1 +1,1 @@
-export { default as maine } from './maine'
+export {default as maine} from './maine';

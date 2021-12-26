@@ -1,1 +1,1 @@
-export { default as idaho } from './idaho'
+export {default as idaho} from './idaho';

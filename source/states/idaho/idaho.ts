@@ -1,8 +1,8 @@
-import sample from 'lodash.sample'
-import shuffle from 'lodash.shuffle'
+import sample from 'lodash.sample';
+import shuffle from 'lodash.shuffle';
 
-import { randomNumericString } from '../../lib'
-import { bb26Random } from 'bb26'
+import {randomNumericString} from '../../lib';
+import {bb26Random} from 'bb26';
 
 /**
  * Generates random serial for [Idaho](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Idaho#1968_to_present)
@@ -26,96 +26,97 @@ import { bb26Random } from 'bb26'
  * idaho() // 'K 066648'
  * ```
  */
-export default function idaho (): string {
-  interface County {
-    letter: string
-    count: number
-  }
+export default function idaho(): string {
+	interface County {
+		letter: string;
+		count: number;
+	}
 
-  const counties: County[] = [
-    { letter: 'A', count: 2 },
-    { letter: 'B', count: 10 },
-    { letter: 'C', count: 7 },
-    { letter: 'E', count: 1 },
-    { letter: 'F', count: 2 },
-    { letter: 'G', count: 2 },
-    { letter: 'I', count: 1 },
-    { letter: 'J', count: 2 },
-    { letter: 'K', count: 1 },
-    { letter: 'L', count: 4 },
-    { letter: 'M', count: 2 },
-    { letter: 'N', count: 1 },
-    { letter: 'O', count: 2 },
-    { letter: 'P', count: 2 },
-    { letter: 'S', count: 1 },
-    { letter: 'T', count: 2 },
-    { letter: 'V', count: 1 },
-    { letter: 'W', count: 1 },
-  ]
-  const countyCodes: string[] = []
-  let numbers: string
-  let right: string = ''
+	const counties: County[] = [
+		{letter: 'A', count: 2},
+		{letter: 'B', count: 10},
+		{letter: 'C', count: 7},
+		{letter: 'E', count: 1},
+		{letter: 'F', count: 2},
+		{letter: 'G', count: 2},
+		{letter: 'I', count: 1},
+		{letter: 'J', count: 2},
+		{letter: 'K', count: 1},
+		{letter: 'L', count: 4},
+		{letter: 'M', count: 2},
+		{letter: 'N', count: 1},
+		{letter: 'O', count: 2},
+		{letter: 'P', count: 2},
+		{letter: 'S', count: 1},
+		{letter: 'T', count: 2},
+		{letter: 'V', count: 1},
+		{letter: 'W', count: 1}
+	];
+	const countyCodes: string[] = [];
+	let numbers: string;
+	let right = '';
 
-  counties.forEach(county => {
-    for (let i = 0; i < county.count; i++) {
-      const count = county.count
-      const number = count > 1 ? `${i + 1}` : ''
+	for (const county of counties) {
+		for (let i = 0; i < county.count; i++) {
+			const count = county.count;
+			const number = count > 1 ? `${i + 1}` : '';
 
-      countyCodes.push(number + county.letter)
-    }
-  })
+			countyCodes.push(number + county.letter);
+		}
+	}
 
-  const countyCode = <string>sample(countyCodes)
+	const countyCode = sample(countyCodes)!;
 
-  switch (countyCode.length) {
-    case 1:
-      // There's only one county character, so the format must be
-      // `A 123456`
+	switch (countyCode.length) {
+		case 1:
+			// There's only one county character, so the format must be
+			// `A 123456`
 
-      right = randomNumericString(999999)
+			right = randomNumericString(999999);
 
-      break
-    case 2:
-      // There are two county characters, so the format can be
-      // `0A 12345`, `0A A1234`, `0A AB123`, `0A 1A234`, `0A 1234A`, or
-      // `0A 123AB`
+			break;
+		case 2:
+			// There are two county characters, so the format can be
+			// `0A 12345`, `0A A1234`, `0A AB123`, `0A 1A234`, `0A 1234A`, or
+			// `0A 123AB`
 
-      numbers = randomNumericString(<number>sample([999, 9999, 99999]))
+			numbers = randomNumericString(sample([999, 9999, 99999])!);
 
-      switch (numbers.length) {
-        case 3:
-          const letters = bb26Random('ZZ')
-          numbers = randomNumericString(999)
+			switch (numbers.length) {
+				case 3:
+					const letters = bb26Random('ZZ');
+					numbers = randomNumericString(999);
 
-          right = letters.length === 1
-            ? randomNumericString(9) + letters + numbers
-            : shuffle([letters, numbers]).join('')
+					right =
+						letters.length === 1
+							? randomNumericString(9) + letters + numbers
+							: shuffle([letters, numbers]).join('');
 
-          break
-        case 4:
-          const letter = bb26Random('Z')
-          numbers = randomNumericString(9999)
+					break;
+				case 4:
+					const letter = bb26Random('Z');
+					numbers = randomNumericString(9999);
 
-          right = shuffle([letter, numbers]).join('')
+					right = shuffle([letter, numbers]).join('');
 
-          break
-        case 5:
-          right = numbers
+					break;
+				case 5:
+					right = numbers;
 
-          break
-      }
+					break;
+			}
 
-      break
-    case 3:
-      // There are three county characters, so the format can be
-      // `CCC 1234` or `CCC A123`
+			break;
+		case 3:
+			// There are three county characters, so the format can be
+			// `CCC 1234` or `CCC A123`
 
-      numbers = randomNumericString(<number>sample([999, 9999]))
+			numbers = randomNumericString(sample([999, 9999])!);
 
-      right = numbers.length === 3 ? bb26Random('Z') + numbers : numbers
+			right = numbers.length === 3 ? bb26Random('Z') + numbers : numbers;
 
-      break
-  }
+			break;
+	}
 
-  return `${countyCode} ${right}`
+	return `${countyCode} ${right}`;
 }

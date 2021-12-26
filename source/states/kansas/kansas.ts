@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Kansas](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Kansas#1975_to_present)
@@ -15,9 +15,9 @@ import { randomNumericString } from '../../lib'
  * kansas() // '233 LUH'
  * ```
  */
-export default function kansas (): string {
-  const letters: string = bb26Random('AAA', 'MBF')
-  const numbers: string = randomNumericString(999)
+export default function kansas(): string {
+	const letters: string = bb26Random('AAA', 'MBF');
+	const numbers: string = randomNumericString(999);
 
-  return `${numbers} ${letters}`.toUpperCase()
+	return `${numbers} ${letters}`.toUpperCase();
 }

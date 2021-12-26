@@ -1,5 +1,5 @@
-import { randomNumericString } from '../../lib'
-import { bb26Random } from 'bb26'
+import {randomNumericString} from '../../lib';
+import {bb26Random} from 'bb26';
 
 /**
  * Generates random serial for [Georgia](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Georgia_(U.S._state)#1971_to_present)
@@ -14,9 +14,9 @@ import { bb26Random } from 'bb26'
  * georgia() // 'PJW3134'
  * ```
  */
-export default function georgia (): string {
-  const letters: string = bb26Random('PFA', 'PMA')
-  const digits: string = randomNumericString(9999)
+export default function georgia(): string {
+	const letters: string = bb26Random('PFA', 'PMA');
+	const digits: string = randomNumericString(9999);
 
-  return letters + digits
+	return letters + digits;
 }

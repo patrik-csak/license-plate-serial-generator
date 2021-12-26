@@ -1,1 +1,1 @@
-export { default as newYork } from './new-york'
+export {default as newYork} from './new-york';

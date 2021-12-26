@@ -1,7 +1,7 @@
-import { bb26Range } from 'bb26'
-import sample from 'lodash.sample'
+import {bb26Range} from 'bb26';
+import sample from 'lodash.sample';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Alaska](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Alaska#1953_to_present)
@@ -16,12 +16,12 @@ import { randomNumericString } from '../../lib'
  * alaska() // 'KCA 245'
  * ```
  */
-export default function alaska (): string {
-  const validLetters = ['FUZ']
-    .concat(bb26Range('GAA', 'HAA'))
-    .concat(bb26Range('KAA', 'KDZ'))
-  const letters = sample(validLetters)
-  const numbers = randomNumericString(100, 999)
+export default function alaska(): string {
+	const validLetters = ['FUZ']
+		.concat(bb26Range('GAA', 'HAA'))
+		.concat(bb26Range('KAA', 'KDZ'));
+	const letters = sample(validLetters);
+	const numbers = randomNumericString(100, 999);
 
-  return `${letters} ${numbers}`
+	return `${letters} ${numbers}`;
 }

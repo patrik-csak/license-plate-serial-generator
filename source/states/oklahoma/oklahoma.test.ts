@@ -2,35 +2,35 @@
 // - Format: `ABC-123`
 // - Range: `AAA-001` to `JRK-999`
 
-import { bb26Range } from 'bb26'
+import {bb26Range} from 'bb26';
 
-import oklahoma from './oklahoma'
+import oklahoma from './oklahoma';
 import {
-  getBeginningLetters,
-  getEndingDigits,
-  testSerial,
-  testSerialFormat,
-} from '../../../tests/helpers'
+	getBeginningLetters,
+	getEndingDigits,
+	testSerial,
+	testSerialFormat
+} from '../../../tests/helpers';
 
 describe('Oklahoma', () => {
-  testSerialFormat(oklahoma(), /^[A-Z]+-\d{3}$/)
+	testSerialFormat(oklahoma(), /^[A-Z]+-\d{3}$/);
 
-  testSerial('Should contain valid letters', oklahoma(), serial => {
-    const letters = getBeginningLetters(serial)
+	testSerial('Should contain valid letters', oklahoma(), (serial) => {
+		const letters = getBeginningLetters(serial);
 
-    expect(letters.length).toBe(3)
+		expect(letters.length).toBe(3);
 
-    const validLetters = bb26Range('AAA', 'JRL')
+		const validLetters = bb26Range('AAA', 'JRL');
 
-    expect(validLetters).toContain(letters)
-  })
+		expect(validLetters).toContain(letters);
+	});
 
-  testSerial('Should contain valid digits', oklahoma(), serial => {
-    const digits = getEndingDigits(serial)
+	testSerial('Should contain valid digits', oklahoma(), (serial) => {
+		const digits = getEndingDigits(serial);
 
-    expect(digits.length).toBe(3)
+		expect(digits.length).toBe(3);
 
-    expect(+digits).toBeGreaterThanOrEqual(1)
-    expect(+digits).toBeLessThanOrEqual(999)
-  })
-})
+		expect(Number(digits)).toBeGreaterThanOrEqual(1);
+		expect(Number(digits)).toBeLessThanOrEqual(999);
+	});
+});

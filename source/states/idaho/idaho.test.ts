@@ -10,18 +10,18 @@
 //   - `10B 1234` or
 //   - `10B A123`
 
-import idaho from './idaho'
-import testSerial from '../../../tests/helpers/test-serial'
+import idaho from './idaho';
+import testSerial from '../../../tests/helpers/test-serial';
 
 describe('Idaho', () => {
-  testSerial('Should start with county code', idaho(), serial => {
-    expect(serial).toMatch(/^([A-Z]|\d[A-Z]|10B) /)
-  })
+	testSerial('Should start with county code', idaho(), (serial) => {
+		expect(serial).toMatch(/^([A-Z]|\d[A-Z]|10B) /);
+	});
 
-  testSerial('Should end correctly', idaho(), serial => {
-    expect(serial).toMatch(/^([A-Z]|\d[A-Z]|10B) /)
-    expect(serial).toMatch(
-      / (\d{4,6}|[A-Z]\d{3,4}|[A-Z]{2}\d{3}|\d[A-Z]\d{3}|\d{4}[A-Z]|\d{3}[A-Z]{2})$/,
-    )
-  })
-})
+	testSerial('Should end correctly', idaho(), (serial) => {
+		expect(serial).toMatch(/^([A-Z]|\d[A-Z]|10B) /);
+		expect(serial).toMatch(
+			/ (\d{4,6}|[A-Z]\d{3,4}|[A-Z]{2}\d{3}|\d[A-Z]\d{3}|\d{4}[A-Z]|\d{3}[A-Z]{2})$/
+		);
+	});
+});

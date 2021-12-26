@@ -1,1 +1,1 @@
-export { default as ohio } from './ohio'
+export {default as ohio} from './ohio';

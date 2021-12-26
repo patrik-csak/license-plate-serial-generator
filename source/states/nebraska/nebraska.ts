@@ -1,23 +1,23 @@
-import { bb26Random } from 'bb26'
-import range from 'lodash.range'
-import sample from 'lodash.sample'
+import {bb26Random} from 'bb26';
+import range from 'lodash.range';
+import sample from 'lodash.sample';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /** @ignore */
-export function countyCoded (county: number): string {
-  const letters = `${county}-${bb26Random('ZZ')}`
-  const digits = randomNumericString(Math.pow(10, 7 - letters.length) - 1)
+export function countyCoded(county: number): string {
+	const letters = `${county}-${bb26Random('ZZ')}`;
+	const digits = randomNumericString(10 ** (7 - letters.length) - 1);
 
-  return letters + digits
+	return letters + digits;
 }
 
 /** @ignore */
-export function abc123 (): string {
-  const letters = bb26Random('UMA', 'WDH')
-  const numbers = randomNumericString(999)
+export function abc123(): string {
+	const letters = bb26Random('UMA', 'WDH');
+	const numbers = randomNumericString(999);
 
-  return `${letters} ${numbers}`
+	return `${letters} ${numbers}`;
 }
 
 /**
@@ -46,10 +46,10 @@ export function abc123 (): string {
  * nebraska() // '14-QD84'
  * ```
  */
-export default function nebraska (): string {
-  const counties = range(1, 93)
-  // TODO: Weigh county choice by population
-  const county = <number>sample(counties)
+export default function nebraska(): string {
+	const counties = range(1, 93);
+	// TODO: Weigh county choice by population
+	const county = sample(counties)!;
 
-  return [1, 2, 59].includes(county) ? abc123() : countyCoded(county)
+	return [1, 2, 59].includes(county) ? abc123() : countyCoded(county);
 }

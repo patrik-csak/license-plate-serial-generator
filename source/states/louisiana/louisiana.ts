@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Louisiana](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Louisiana#1964_to_present)
@@ -15,9 +15,9 @@ import { randomNumericString } from '../../lib'
  * louisiana() // '594 RTX'
  * ```
  */
-export default function louisiana (): string {
-  const numbers = randomNumericString(999)
-  const letters = bb26Random('AAA', numbers === '999' ? 'DEV' : 'ZZZ')
+export default function louisiana(): string {
+	const numbers = randomNumericString(999);
+	const letters = bb26Random('AAA', numbers === '999' ? 'DEV' : 'ZZZ');
 
-  return `${numbers} ${letters}`
+	return `${numbers} ${letters}`;
 }

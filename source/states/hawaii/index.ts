@@ -1,1 +1,1 @@
-export { default as hawaii } from './hawaii'
+export {default as hawaii} from './hawaii';

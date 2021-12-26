@@ -1,1 +1,1 @@
-export { default as indiana } from './indiana'
+export {default as indiana} from './indiana';

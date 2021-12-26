@@ -1,4 +1,4 @@
-import random from 'lodash.random'
+import random from 'lodash.random';
 
 /**
  * Generates random serial for [Delaware](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Delaware#1942_to_present)
@@ -13,6 +13,6 @@ import random from 'lodash.random'
  * delaware() // '346692'
  * ```
  */
-export default function delaware (): string {
-  return `${random(4, 999999)}`
+export default function delaware(): string {
+	return `${random(4, 999999)}`;
 }

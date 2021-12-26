@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { interpunct, randomNumericString } from '../../lib'
+import {interpunct, randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Nevada](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Nevada#1960_to_present)
@@ -15,10 +15,10 @@ import { interpunct, randomNumericString } from '../../lib'
  * nevada() // '927·D40'
  * ```
  */
-export default function nevada () {
-  const left = randomNumericString(1, 999)
-  const letter = bb26Random('E')
-  const right = randomNumericString(letter === 'e' ? 49 : 99)
+export default function nevada() {
+	const left = randomNumericString(1, 999);
+	const letter = bb26Random('E');
+	const right = randomNumericString(letter === 'e' ? 49 : 99);
 
-  return left + interpunct + letter + right
+	return left + interpunct + letter + right;
 }

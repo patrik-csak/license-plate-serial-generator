@@ -1,1 +1,1 @@
-export { default as arkansas } from './arkansas'
+export {default as arkansas} from './arkansas';

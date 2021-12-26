@@ -1,7 +1,7 @@
-import { bb26Random } from 'bb26'
-import sample from 'lodash.sample'
+import {bb26Random} from 'bb26';
+import sample from 'lodash.sample';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Maryland](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Maryland#1970_to_present)
@@ -16,16 +16,16 @@ import { randomNumericString } from '../../lib'
  * maryland() // '9DL7397'
  * ```
  */
-export default function maryland (): string {
-  const digit = sample([8, 9])
-  const letters = bb26Random(
-    digit === 8 ? 'CN' : 'AA',
-    digit === 9 ? 'DW' : 'ZZ',
-  )
-  const digits = randomNumericString(
-    0,
-    digit + letters === '9DW' ? 2552 : 9999,
-  )
+export default function maryland(): string {
+	const digit = sample([8, 9]);
+	const letters = bb26Random(
+		digit === 8 ? 'CN' : 'AA',
+		digit === 9 ? 'DW' : 'ZZ'
+	);
+	const digits = randomNumericString(
+		0,
+		digit + letters === '9DW' ? 2552 : 9999
+	);
 
-  return digit + letters + digits
+	return digit + letters + digits;
 }

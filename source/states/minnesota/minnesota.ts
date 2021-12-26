@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Minnesota](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Minnesota#1955_to_present)
@@ -15,9 +15,9 @@ import { randomNumericString } from '../../lib'
  * minnesota() // 'ADZ-278'
  * ```
  */
-export default function minnesota (): string {
-  const letters = bb26Random('AAA', 'DBY')
-  const numbers = randomNumericString(1, 999)
+export default function minnesota(): string {
+	const letters = bb26Random('AAA', 'DBY');
+	const numbers = randomNumericString(1, 999);
 
-  return `${letters}-${numbers}`
+	return `${letters}-${numbers}`;
 }

@@ -2,32 +2,32 @@
 // - Format: `123 ABC`
 // - Range: `001 KPG` to `999 YFZ`
 
-import arkansas from './arkansas'
+import arkansas from './arkansas';
 import {
-  getBeginningDigits,
-  getEndingLetters,
-  testSerial,
-  testSerialFormat,
-} from '../../../tests/helpers'
-import bb26Range from 'bb26/dist/bb26-range'
+	getBeginningDigits,
+	getEndingLetters,
+	testSerial,
+	testSerialFormat
+} from '../../../tests/helpers';
+import bb26Range from 'bb26/dist/bb26-range';
 
 describe('Arkansas', () => {
-  testSerialFormat(arkansas(), /^\d{3} [A-Z]{3}$/)
+	testSerialFormat(arkansas(), /^\d{3} [A-Z]{3}$/);
 
-  testSerial('Should contain valid letters', arkansas(), serial => {
-    const letters = getEndingLetters(serial)
+	testSerial('Should contain valid letters', arkansas(), (serial) => {
+		const letters = getEndingLetters(serial);
 
-    const validLetters = bb26Range('KPG', 'YGA')
+		const validLetters = bb26Range('KPG', 'YGA');
 
-    expect(letters.length).toBe(3)
-    expect(validLetters).toContain(letters)
-  })
+		expect(letters.length).toBe(3);
+		expect(validLetters).toContain(letters);
+	});
 
-  testSerial('Should contain valid digits', arkansas(), serial => {
-    const digits = getBeginningDigits(serial)
+	testSerial('Should contain valid digits', arkansas(), (serial) => {
+		const digits = getBeginningDigits(serial);
 
-    expect(digits.length).toBe(3)
-    expect(+digits).toBeGreaterThanOrEqual(1)
-    expect(+digits).toBeLessThanOrEqual(999)
-  })
-})
+		expect(digits.length).toBe(3);
+		expect(Number(digits)).toBeGreaterThanOrEqual(1);
+		expect(Number(digits)).toBeLessThanOrEqual(999);
+	});
+});

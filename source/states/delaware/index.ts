@@ -1,1 +1,1 @@
-export { default as delaware } from './delaware'
+export {default as delaware} from './delaware';

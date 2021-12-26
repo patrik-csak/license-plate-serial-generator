@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Florida](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Florida#1974_to_present)
@@ -15,14 +15,14 @@ import { randomNumericString } from '../../lib'
  * florida() // 'Z36 5BG'
  * ```
  */
-export default function florida (): string {
-  let digits = randomNumericString(890)
-  let left = 'Z'
-  let right = ''
+export default function florida(): string {
+	const digits = randomNumericString(890);
+	let left = 'Z';
+	let right = '';
 
-  left += digits.slice(0, 2)
-  right += digits[2]
-  right += bb26Random('AA', digits === '890' ? 'FY' : 'AAA')
+	left += digits.slice(0, 2);
+	right += digits[2];
+	right += bb26Random('AA', digits === '890' ? 'FY' : 'AAA');
 
-  return `${left} ${right}`
+	return `${left} ${right}`;
 }

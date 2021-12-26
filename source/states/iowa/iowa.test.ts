@@ -2,32 +2,33 @@
 // - Format: `ABC 123`
 // - Range: `GXV 200` to `IBB 999`
 
-import iowa from './iowa'
+import iowa from './iowa';
 import {
-  getBeginningLetters, getEndingDigits,
-  testSerial,
-  testSerialFormat,
-} from '../../../tests/helpers'
-import { bb26Range } from 'bb26'
+	getBeginningLetters,
+	getEndingDigits,
+	testSerial,
+	testSerialFormat
+} from '../../../tests/helpers';
+import {bb26Range} from 'bb26';
 
 describe('Iowa', () => {
-  testSerialFormat(iowa(), /^[A-Z]{3} \d{3}$/)
+	testSerialFormat(iowa(), /^[A-Z]{3} \d{3}$/);
 
-  testSerial('Should contain valid letters', iowa(), serial => {
-    const letters = getBeginningLetters(serial)
+	testSerial('Should contain valid letters', iowa(), (serial) => {
+		const letters = getBeginningLetters(serial);
 
-    expect(letters.length).toBe(3)
+		expect(letters.length).toBe(3);
 
-    const validLetters = bb26Range('GXV', 'IBC')
+		const validLetters = bb26Range('GXV', 'IBC');
 
-    expect(validLetters).toContain(letters)
-  })
+		expect(validLetters).toContain(letters);
+	});
 
-  testSerial('Should contain valid digits', iowa(), serial => {
-    const digits = getEndingDigits(serial)
-    const letters = getBeginningLetters(serial)
+	testSerial('Should contain valid digits', iowa(), (serial) => {
+		const digits = getEndingDigits(serial);
+		const letters = getBeginningLetters(serial);
 
-    expect(+digits).toBeGreaterThanOrEqual(letters === 'GXV' ? 200 : 0)
-    expect(+digits).toBeLessThanOrEqual(999)
-  })
-})
+		expect(Number(digits)).toBeGreaterThanOrEqual(letters === 'GXV' ? 200 : 0);
+		expect(Number(digits)).toBeLessThanOrEqual(999);
+	});
+});

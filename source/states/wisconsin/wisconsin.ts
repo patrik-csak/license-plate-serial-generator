@@ -1,6 +1,6 @@
-import { bb26Random } from 'bb26'
+import {bb26Random} from 'bb26';
 
-import { randomNumericString } from '../../lib'
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Wisconsin](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Wisconsin#1968_to_present)
@@ -15,12 +15,12 @@ import { randomNumericString } from '../../lib'
  * wisconsin() // 'AFF-2603'
  * ```
  */
-export default function wisconsin (): string {
-  const letters = bb26Random('AAA', 'AFR')
-  const numbers = randomNumericString(
-    letters === 'AAA' ? 1001 : 0,
-    letters === 'AFR' ? 2743 : 9999,
-  )
+export default function wisconsin(): string {
+	const letters = bb26Random('AAA', 'AFR');
+	const numbers = randomNumericString(
+		letters === 'AAA' ? 1001 : 0,
+		letters === 'AFR' ? 2743 : 9999
+	);
 
-  return `${letters}-${numbers}`.toUpperCase()
+	return `${letters}-${numbers}`.toUpperCase();
 }

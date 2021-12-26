@@ -26,9 +26,10 @@
     "docs:develop": "npm-run-all --parallel docs:serve docs:watch",
     "docs:serve": "nodemon --ext html --watch docs --exec 'npx serve docs'",
     "docs:watch": "nodemon --ext ts --watch source --exec 'npm run docs'",
+    "format": "xo --fix",
     "prepare": "del-cli dist && npm run build",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test": "xo && jest",
+    "test:coverage": "xo && jest --coverage"
   },
   "dependencies": {
     "bb26": "^0.3.1",
@@ -52,7 +53,8 @@
     "ts-jest": "^24.0.2",
     "ts-node": "^8.2.0",
     "typedoc": "^0.14.2",
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.1",
+    "xo": "^0.39.1"
   },
   "types": "dist"
 }
