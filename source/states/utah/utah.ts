@@ -1,6 +1,5 @@
 import {bb26Random} from 'bb26';
-import sample from 'lodash.sample';
-
+import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
 
 /** @ignore */
@@ -69,5 +68,5 @@ export function ski(): string {
  * ```
  */
 export default function utah(): string {
-	return (<() => string>sample([arch, god, ski]))();
+	return randomItem([arch, god, ski])();
 }

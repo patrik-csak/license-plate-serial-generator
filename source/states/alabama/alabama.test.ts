@@ -25,10 +25,7 @@ describe('Alabama', () => {
 		(serial) => {
 			const countyCode = getBeginningDigits(serial);
 
-			const letters = serial.substring(
-				countyCode.length,
-				2 + countyCode.length
-			);
+			const letters = serial.slice(countyCode.length, 2 + countyCode.length);
 
 			expect(letters).toMatch(/[A-Z]{2}/);
 		}

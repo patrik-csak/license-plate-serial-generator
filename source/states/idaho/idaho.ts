@@ -1,8 +1,7 @@
-import sample from 'lodash.sample';
-import shuffle from 'lodash.shuffle';
-
-import {randomNumericString} from '../../lib';
 import {bb26Random} from 'bb26';
+import shuffle from 'lodash.shuffle';
+import randomItem from 'random-item';
+import {randomNumericString} from '../../lib';
 
 /**
  * Generates random serial for [Idaho](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Idaho#1968_to_present)
@@ -65,25 +64,27 @@ export default function idaho(): string {
 		}
 	}
 
-	const countyCode = sample(countyCodes)!;
+	const countyCode = randomItem(countyCodes);
 
 	switch (countyCode.length) {
-		case 1:
+		case 1: {
 			// There's only one county character, so the format must be
 			// `A 123456`
 
 			right = randomNumericString(999999);
 
 			break;
-		case 2:
+		}
+
+		case 2: {
 			// There are two county characters, so the format can be
 			// `0A 12345`, `0A A1234`, `0A AB123`, `0A 1A234`, `0A 1234A`, or
 			// `0A 123AB`
 
-			numbers = randomNumericString(sample([999, 9999, 99999])!);
+			numbers = randomNumericString(randomItem([999, 9999, 99999]));
 
 			switch (numbers.length) {
-				case 3:
+				case 3: {
 					const letters = bb26Random('ZZ');
 					numbers = randomNumericString(999);
 
@@ -93,29 +94,39 @@ export default function idaho(): string {
 							: shuffle([letters, numbers]).join('');
 
 					break;
-				case 4:
+				}
+
+				case 4: {
 					const letter = bb26Random('Z');
 					numbers = randomNumericString(9999);
 
 					right = shuffle([letter, numbers]).join('');
 
 					break;
-				case 5:
+				}
+
+				case 5: {
 					right = numbers;
 
 					break;
+				}
+				// No default
 			}
 
 			break;
-		case 3:
+		}
+
+		case 3: {
 			// There are three county characters, so the format can be
 			// `CCC 1234` or `CCC A123`
 
-			numbers = randomNumericString(sample([999, 9999])!);
+			numbers = randomNumericString(randomItem([999, 9999]));
 
 			right = numbers.length === 3 ? bb26Random('Z') + numbers : numbers;
 
 			break;
+		}
+		// No default
 	}
 
 	return `${countyCode} ${right}`;

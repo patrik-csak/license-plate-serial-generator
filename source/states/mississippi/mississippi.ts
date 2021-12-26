@@ -1,8 +1,7 @@
-import sample from 'lodash.sample';
-
+import {bb26Random} from 'bb26';
+import randomItem from 'random-item';
 import counties from './mississippi-counties';
 import {randomNumericString} from '../../lib';
-import {bb26Random} from 'bb26';
 
 /**
  * Generates random serial for [Mississippi](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Mississippi#1976_to_present)
@@ -17,7 +16,7 @@ import {bb26Random} from 'bb26';
  */
 export default function mississippi(): string {
 	// TODO: Weigh county choice by population
-	const county = sample(sample(counties)!.codes)!;
+	const county = randomItem(randomItem(counties).codes);
 	const letters = county + bb26Random('Z');
 	const numbers = randomNumericString(9999);
 

@@ -12,10 +12,11 @@ describe('Mississippi', () => {
 		'Should start with a two-letter county code followed by a single character',
 		mississippi(),
 		(serial) => {
-			const validCountyCodes = counties.reduce<string[]>(
-				(codes, county) => codes.concat(county.codes),
-				[]
-			);
+			let validCountyCodes: string[] = [];
+
+			for (const county of counties) {
+				validCountyCodes = validCountyCodes.concat(county.codes);
+			}
 
 			expect(validCountyCodes).toContain(serial.slice(0, 2));
 			expect(serial[2]).toMatch(/[A-Z]/);

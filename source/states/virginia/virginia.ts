@@ -1,7 +1,6 @@
-import sample from 'lodash.sample';
-
-import {randomNumericString} from '../../lib';
 import {bb26Random} from 'bb26';
+import randomItem from 'random-item';
+import {randomNumericString} from '../../lib';
 
 /** @ignore */
 interface Range {
@@ -42,7 +41,7 @@ export default function virginia(): string {
 			lettersStart: 'UPA'
 		}
 	];
-	const range = sample(ranges)!;
+	const range = randomItem(ranges);
 
 	const letters = bb26Random(range.lettersStart, range.lettersEnd);
 	const numbers = randomNumericString(

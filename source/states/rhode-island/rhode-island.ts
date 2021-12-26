@@ -1,8 +1,8 @@
 import {bb26Random} from 'bb26';
 import random from 'lodash.random';
-import sample from 'lodash.sample';
 
 import {randomNumericString} from '../../lib';
+import randomItem from 'random-item';
 
 /** @ignore */
 export function alphaNumeric(): string {
@@ -36,5 +36,5 @@ export function numeric(): string {
  * ```
  */
 export default function rhodeIsland() {
-	return (<() => string>sample([alphaNumeric, numeric]))();
+	return randomItem([alphaNumeric, numeric])();
 }
