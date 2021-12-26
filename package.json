@@ -26,7 +26,7 @@
     "docs:develop": "npm-run-all --parallel docs:serve docs:watch",
     "docs:serve": "nodemon --ext html --watch docs --exec 'npx serve docs'",
     "docs:watch": "nodemon --ext ts --watch source --exec 'npm run docs'",
-    "prepublishOnly": "npm run build",
+    "prepare": "del-cli dist && npm run build",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
@@ -44,6 +44,7 @@
     "@types/lodash.range": "^3.2.6",
     "@types/lodash.sample": "^4.2.6",
     "@types/lodash.shuffle": "^4.2.6",
+    "del-cli": "^4.0.1",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
     "npm-run-all": "^4.1.5",
