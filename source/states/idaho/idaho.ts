@@ -1,7 +1,7 @@
 import {bb26Random} from 'bb26';
-import shuffle from 'lodash.shuffle';
 import randomItem from 'random-item';
 import {randomNumericString} from '../../lib';
+import arrayShuffle from 'array-shuffle';
 
 /**
  * Generates random serial for [Idaho](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Idaho#1968_to_present)
@@ -91,7 +91,7 @@ export default function idaho(): string {
 					right =
 						letters.length === 1
 							? randomNumericString(9) + letters + numbers
-							: shuffle([letters, numbers]).join('');
+							: arrayShuffle([letters, numbers]).join('');
 
 					break;
 				}
@@ -100,7 +100,7 @@ export default function idaho(): string {
 					const letter = bb26Random('Z');
 					numbers = randomNumericString(9999);
 
-					right = shuffle([letter, numbers]).join('');
+					right = arrayShuffle([letter, numbers]).join('');
 
 					break;
 				}
