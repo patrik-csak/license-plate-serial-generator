@@ -1,6 +1,6 @@
-// Spec, as of 2019-06-07:
+// Spec, as of 2021-12-14:
 // - Format: `A12-BCD`
-// - Range: `A10-EFF` to `C62-LKA`
+// - Range: `A10-EFF` to `U50-PMC`
 // - `I`, `O`, `Q` not used in any position
 
 import {range as bb26Range} from 'bb26';
@@ -19,7 +19,7 @@ describe('New Jersey', () => {
 		const letter = getBeginningLetters(serial);
 
 		expect(letter.length).toBe(1);
-		expect(letter).toMatch(/[A-C]/);
+		expect(letter).toMatch(/[A-U]/);
 	});
 
 	testSerial('Should contain valid digits', newJersey(), (serial) => {
@@ -27,7 +27,7 @@ describe('New Jersey', () => {
 		const letter = getBeginningLetters(serial);
 
 		expect(Number(digits)).toBeGreaterThanOrEqual(letter === 'A' ? 10 : 0);
-		expect(Number(digits)).toBeLessThanOrEqual(letter === 'C' ? 62 : 99);
+		expect(Number(digits)).toBeLessThanOrEqual(letter === 'U' ? 50 : 99);
 	});
 
 	testSerial('Should end with valid letters', newJersey(), (serial) => {

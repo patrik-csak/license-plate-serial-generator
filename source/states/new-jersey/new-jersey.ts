@@ -19,14 +19,14 @@ import {randomNumericString} from '../../lib';
  */
 export default function newJersey(): string {
 	let left = randomItem(
-		bb26Range('D').filter((string) => !/[IOQ]/.test(string))
+		bb26Range('V').filter((string) => !/[IOQ]/.test(string))
 	);
-	left += randomNumericString(left === 'a' ? 10 : 0, left === 'c' ? 62 : 99);
+	left += randomNumericString(left === 'A' ? 10 : 0, left === 'U' ? 50 : 99);
 
 	const right = randomItem(
 		bb26Range(
 			left === 'A10' ? 'EFF' : 'AAA',
-			left === 'C62' ? 'LKB' : 'AAAA'
+			left === 'U50' ? 'PMD' : 'AAAA'
 		).filter((string) => !/[IOQ]/.test(string))
 	);
 
