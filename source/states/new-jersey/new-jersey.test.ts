@@ -1,8 +1,3 @@
-// Spec, as of 2021-12-14:
-// - Format: `A12-BCD`
-// - Range: `A10-EFF` to `U50-PMC`
-// - `I`, `O`, `Q` not used in any position
-
 import {range as bb26Range} from 'bb26';
 import newJersey from './new-jersey';
 import {
