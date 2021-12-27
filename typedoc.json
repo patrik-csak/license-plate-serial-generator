@@ -1,6 +1,4 @@
 {
-  "mode": "file",
-  "name": "License Plate Serial Generator",
-  "out": "docs",
-  "theme": "minimal"
+  "entryPoints": ["source"],
+  "name": "License Plate Serial Generator"
 }
