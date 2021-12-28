@@ -41,10 +41,6 @@
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^27.0.3",
-    "@types/lodash.random": "^3.2.6",
-    "@types/lodash.range": "^3.2.6",
-    "@types/lodash.sample": "^4.2.6",
-    "@types/lodash.shuffle": "^4.2.6",
     "del-cli": "^4.0.1",
     "jest": "^27.4.5",
     "nodemon": "^2.0.15",
