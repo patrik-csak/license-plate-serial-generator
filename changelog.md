@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - `kansas`
+- `nevada`
 
 ## [0.2.4](https://github.com/ptrkcsk/license-plate-serial-generator/compare/v0.2.3...v0.2.4) - 2021-12-28
 

@@ -1,7 +1,3 @@
-// Spec, as of 2019-05-21:
-// - Format: `123·A45`
-// - Range: `001·A00` to `868·J40`
-
 import nevada from './nevada';
 import {
 	getBeginningDigits,
@@ -19,7 +15,7 @@ describe('Nevada', () => {
 		const digits = getBeginningDigits(serial);
 
 		expect(Number(digits)).toBeGreaterThanOrEqual(1);
-		expect(Number(digits)).toBeLessThanOrEqual(999);
+		expect(Number(digits)).toBeLessThanOrEqual(191);
 	});
 
 	testSerial(
@@ -30,7 +26,7 @@ describe('Nevada', () => {
 
 			expect(letter.length).toBe(1);
 			expect(letter).toMatch(
-				serial.startsWith(`868${interpunct}`) ? /[A-J]/ : /[A-Z]/
+				serial.startsWith(`191${interpunct}`) ? /[A-T]/ : /[A-Z]/
 			);
 		}
 	);
@@ -43,7 +39,7 @@ describe('Nevada', () => {
 
 			expect(Number(digits)).toBeGreaterThanOrEqual(1);
 			expect(Number(digits)).toBeLessThanOrEqual(
-				digits === `868${interpunct}J` ? 40 : 99
+				digits === `191${interpunct}T` ? 71 : 99
 			);
 		}
 	);
