@@ -1,7 +1,3 @@
-// Spec, as of 2019-05-20:
-// - Format: `123 ABC`
-// - Range: `000 LJX` to `444 MBE`
-
 import {range as bb26Range} from 'bb26';
 import kansas from './kansas';
 import {
@@ -16,12 +12,12 @@ describe('Kansas', () => {
 
 	testSerial('Should contain valid digits', kansas(), (serial) => {
 		const digits = getBeginningDigits(serial);
-		const letters = getEndingLetters(serial);
 
 		expect(digits.length).toBe(3);
 
 		expect(Number(digits)).toBeGreaterThanOrEqual(0);
-		expect(Number(digits)).toBeLessThanOrEqual(letters === 'MBE' ? 444 : 999);
+		expect(Number(digits)).toBeLessThanOrEqual(302);
+		expect(Number(digits)).not.toEqual(666);
 	});
 
 	testSerial('Should contain valid letters', kansas(), (serial) => {
@@ -32,8 +28,8 @@ describe('Kansas', () => {
 
 		const validLetters = bb26Range(
 			digits === '000' ? 'LJX' : 'AAA',
-			digits === '444' ? 'MBF' : 'AAAA'
-		);
+			digits === '302' ? 'PLA' : 'AAAA'
+		).filter((letters) => !/[IOQ]/.test(letters));
 
 		expect(validLetters).toContain(letters);
 	});
