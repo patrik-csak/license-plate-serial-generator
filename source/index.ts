@@ -49,3 +49,4 @@ export {washingtonDc} from './states/washington-dc';
 export {westVirginia} from './states/west-virginia';
 export {wisconsin} from './states/wisconsin';
 export {wyoming} from './states/wyoming';
+export {any} from './states/any';
