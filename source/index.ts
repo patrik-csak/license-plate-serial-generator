@@ -36,6 +36,7 @@ export {ohio} from './states/ohio';
 export {oklahoma} from './states/oklahoma';
 export {oregon} from './states/oregon';
 export {pennsylvania} from './states/pennsylvania';
+export {random} from './states/random';
 export {rhodeIsland} from './states/rhode-island';
 export {southCarolina} from './states/south-carolina';
 export {southDakota} from './states/south-dakota';
