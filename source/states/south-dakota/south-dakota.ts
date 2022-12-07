@@ -21,9 +21,7 @@ import {randomNumericString} from '../../lib';
  * ```
  */
 export default function southDakota(): string {
-	const county = randomItem(
-		Array.from(getRange({start: 1, end: 66})).concat(67)
-	);
+	const county = randomItem([...getRange({start: 1, end: 66}), 67]);
 	const right = randomNumericString(999);
 	let left = `${county}`;
 

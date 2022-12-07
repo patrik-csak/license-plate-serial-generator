@@ -15,7 +15,7 @@ describe('Mississippi', () => {
 			let validCountyCodes: string[] = [];
 
 			for (const county of counties) {
-				validCountyCodes = validCountyCodes.concat(county.codes);
+				validCountyCodes = [...validCountyCodes, ...county.codes];
 			}
 
 			expect(validCountyCodes).toContain(serial.slice(0, 2));

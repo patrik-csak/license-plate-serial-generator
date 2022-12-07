@@ -18,9 +18,7 @@ import {randomNumericString} from '../../lib';
  */
 export default function wyoming(): string {
 	// TODO: Weigh county choice based on population
-	const county = randomItem(
-		Array.from(getRange({start: 1, end: 23})).concat(99)
-	);
+	const county = randomItem([...getRange({start: 1, end: 23}), 99]);
 	const digits = randomNumericString(99999);
 
 	return `${county}-${digits}`;

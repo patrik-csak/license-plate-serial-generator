@@ -22,9 +22,7 @@ describe('Wyoming', () => {
 		expect(countyCode.length).toBeGreaterThanOrEqual(1);
 		expect(countyCode.length).toBeLessThanOrEqual(2);
 
-		const validDigits: number[] = Array.from(
-			getRange({start: 1, end: 23})
-		).concat(99);
+		const validDigits: number[] = [...getRange({start: 1, end: 23}), 99];
 
 		expect(validDigits).toContain(Number(countyCode));
 	});
