@@ -36,12 +36,13 @@ describe('Hawaii', () => {
 			expect(letters.length).toBe(3);
 			expect(letters[0]).toMatch(/[E-GJNPR-Y]/);
 
-			const validLetters = bb26Range('EAA', 'HAA')
-				.concat(bb26Range('JAA', 'KAA'))
-				.concat(bb26Range('NAA', 'OAA'))
-				.concat(bb26Range('PAA', 'QAA'))
-				.concat(bb26Range('RAA', 'TTU'))
-				.filter((string) => !/[HKLM]/.test(string));
+			const validLetters = [
+				...bb26Range('EAA', 'HAA'),
+				...bb26Range('JAA', 'KAA'),
+				...bb26Range('NAA', 'OAA'),
+				...bb26Range('PAA', 'QAA'),
+				...bb26Range('RAA', 'TTU')
+			].filter((string) => !/[HKLM]/.test(string));
 
 			expect(validLetters).toContain(letters);
 		});

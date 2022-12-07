@@ -18,9 +18,10 @@ describe('Virginia', () => {
 
 	testSerial('Should contain valid letters', virginia(), (serial) => {
 		const letters = getBeginningLetters(serial);
-		const validLetters = bb26Range('VAA', 'WAA').concat(
-			bb26Range('UPA', 'VAA')
-		);
+		const validLetters = [
+			...bb26Range('VAA', 'WAA'),
+			...bb26Range('UPA', 'VAA')
+		];
 
 		expect(validLetters).toContain(letters);
 	});

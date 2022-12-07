@@ -46,7 +46,7 @@ export function abc123(): string {
  * ```
  */
 export default function nebraska(): string {
-	const counties = Array.from(getRange({start: 1, end: 93}));
+	const counties = [...getRange({start: 1, end: 93})];
 	// TODO: Weigh county choice by population
 	const county = randomItem(counties);
 

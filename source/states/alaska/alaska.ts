@@ -16,9 +16,11 @@ import {randomNumericString} from '../../lib';
  * ```
  */
 export default function alaska(): string {
-	const validLetters = ['FUZ']
-		.concat(bb26Range('GAA', 'HAA'))
-		.concat(bb26Range('KAA', 'KDZ'));
+	const validLetters = [
+		...['FUZ'],
+		...bb26Range('GAA', 'HAA'),
+		...bb26Range('KAA', 'KDZ')
+	];
 	const letters = randomItem(validLetters);
 	const numbers = randomNumericString(100, 999);
 

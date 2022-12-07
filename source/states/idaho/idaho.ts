@@ -57,8 +57,7 @@ export default function idaho(): string {
 
 	for (const county of counties) {
 		for (let i = 0; i < county.count; i++) {
-			const count = county.count;
-			const number = count > 1 ? `${i + 1}` : '';
+			const number = county.count > 1 ? `${i + 1}` : '';
 
 			countyCodes.push(number + county.letter);
 		}
