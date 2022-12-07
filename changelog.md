@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/ptrkcsk/license-plate-serial-generator/compare/v0.2.4...main)
 
+### Added
+
+- [`random()`](https://ptrkcsk.github.io/license-plate-serial-generator/functions/random.html) from [@justin-barca-at-camis](https://github.com/justin-barca-at-camis)
+- Support for Node.js versions 18 and 19
+
+### Changed
+
+- Updated dependencies
+
+### Removed
+
+- Support for Node.js versions older than 14
+
 ### Fixed
 
 - `kansas`
