@@ -53,5 +53,8 @@
     "typescript": "^4.5.4",
     "xo": "^0.39.1"
   },
+  "engines": {
+    "node": ">=17 <=19"
+  },
   "types": "dist"
 }
