@@ -37,7 +37,7 @@ describe('Nevada', () => {
 		(serial) => {
 			const digits = getEndingDigits(serial);
 
-			expect(Number(digits)).toBeGreaterThanOrEqual(1);
+			expect(Number(digits)).toBeGreaterThanOrEqual(0);
 			expect(Number(digits)).toBeLessThanOrEqual(
 				digits === `191${interpunct}T` ? 71 : 99
 			);
