@@ -1,6 +1,7 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
 	// https://kulshekhar.github.io/ts-jest/docs/guides/esm-support/#use-esm-presets
+	extensionsToTreatAsEsm: ['.ts'],
 	moduleNameMapper: {
 		'^(\\.{1,2}/.*)\\.js$': '$1',
 	},
