@@ -1,7 +1,7 @@
 import {random as randomBb26} from 'bb26';
 import randomInt from 'random-int';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [West Virginia](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_West_Virginia#1970_to_present)

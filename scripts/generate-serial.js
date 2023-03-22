@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-const lpsg = require('../dist/index.js');
+import process from 'node:process';
+import * as serialGenerator from '../dist/index.js';
 
 const state = process.argv[2];
 
-console.log(lpsg[state]());
+console.log(`${state} : ${serialGenerator[state]()}`);

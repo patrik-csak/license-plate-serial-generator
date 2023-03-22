@@ -4,13 +4,13 @@
 
 import {range as bb26Range} from 'bb26';
 
-import illinois from './illinois';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import illinois from './illinois.js';
 
 describe('Illinois', () => {
 	testSerialFormat(illinois(), /^[A-Z]{2} \d{5}$/);
@@ -31,9 +31,11 @@ describe('Illinois', () => {
 
 		expect(digits.length).toBe(5);
 
-		expect(Number(digits)).toBeGreaterThanOrEqual(letters === 'AQ' ? 11001 : 1);
+		expect(Number(digits)).toBeGreaterThanOrEqual(
+			letters === 'AQ' ? 11_001 : 1,
+		);
 		expect(Number(digits)).toBeLessThanOrEqual(
-			letters === 'BP' ? 20703 : 99999
+			letters === 'BP' ? 20_703 : 99_999,
 		);
 	});
 });

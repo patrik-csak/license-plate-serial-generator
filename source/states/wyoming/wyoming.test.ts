@@ -5,13 +5,13 @@
 // - First digit/digits county code
 
 import getRange from 'get-range';
-import wyoming from './wyoming';
 import {
 	getBeginningDigits,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import wyoming from './wyoming.js';
 
 describe('Wyoming', () => {
 	testSerialFormat(wyoming(), /^\d{1,2}-\d{5}$/);

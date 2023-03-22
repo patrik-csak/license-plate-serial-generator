@@ -1,5 +1,5 @@
 import {random as randomBb26} from 'bb26';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [New York](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_New_York#1966_to_present)
@@ -18,7 +18,7 @@ export default function newYork(): string {
 	const letters: string = randomBb26('FAA', 'JCT');
 	const digits: string = randomNumericString(
 		letters === 'FAA' ? 1000 : 0,
-		9999
+		9999,
 	);
 
 	return `${letters}-${digits}`;

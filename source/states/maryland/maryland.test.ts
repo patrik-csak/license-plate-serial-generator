@@ -3,17 +3,17 @@
 // - Range: `8CN0000` to `9DW2552`
 
 import {range as bb26Range} from 'bb26';
-import maryland from './maryland';
 import {
 	getBeginningDigits,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import maryland from './maryland.js';
 
 const getLetters = (serial: string): string => {
 	const matches = /^\d([A-Z]+)/.exec(serial);
-	return matches ? matches[1] : '';
+	return matches ? matches[1]! : '';
 };
 
 describe('Maryland', () => {
@@ -34,7 +34,7 @@ describe('Maryland', () => {
 
 		const validLetters = bb26Range(
 			digit === 8 ? 'CN' : 'AA',
-			digit === 9 ? 'DX' : 'AAA'
+			digit === 9 ? 'DX' : 'AAA',
 		);
 
 		expect(validLetters).toContain(letters);

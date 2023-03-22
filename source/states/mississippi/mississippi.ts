@@ -1,7 +1,7 @@
 import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
-import counties from './mississippi-counties';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
+import counties from './mississippi-counties.js';
 
 /**
  * Generates random serial for [Mississippi](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Mississippi#1976_to_present)

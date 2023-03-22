@@ -3,13 +3,13 @@
 // - Range: `AAA-1001` to `AFR-2643`
 
 import {range as bb26Range} from 'bb26';
-import wisconsin from './wisconsin';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import wisconsin from './wisconsin.js';
 
 describe('Wisconsin', () => {
 	testSerialFormat(wisconsin(), /^[A-Z]{3}-\d{4}$/);

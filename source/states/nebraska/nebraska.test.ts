@@ -10,14 +10,14 @@
 
 import {range as bb26Range} from 'bb26';
 import randomInt from 'random-int';
-import nebraska, {abc123, countyCoded} from './nebraska';
 import {
 	getBeginningDigits,
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import nebraska, {abc123, countyCoded} from './nebraska.js';
 
 const abc123Regex = /^[A-Z]{3} \d{3}$/;
 const countyCodedRegex = /^\d{1,2}-[A-Z]{1,2}\d{2,4}$/;
@@ -60,7 +60,7 @@ describe('Nebraska', () => {
 					const countyCode = getBeginningDigits(serial);
 
 					expect(Number(countyCode)).toBe(county);
-				}
+				},
 			);
 
 			testSerial(
@@ -68,14 +68,14 @@ describe('Nebraska', () => {
 				countyCoded(county),
 				(serial) => {
 					const matches = /^(\d+)-([A-Z]+)(\d+)$/.exec(serial);
-					const countyCode = matches ? matches[1] : '';
-					const digits = matches ? matches[3] : '';
-					const letters = matches ? matches[2] : '';
+					const countyCode: string = matches ? matches[1]! : '';
+					const digits: string = matches ? matches[3]! : '';
+					const letters: string = matches ? matches[2]! : '';
 
 					expect(letters.length).toBeGreaterThanOrEqual(1);
 					expect(letters.length).toBeLessThanOrEqual(2);
 					expect(digits.length).toBe(6 - countyCode.length - letters.length);
-				}
+				},
 			);
 		});
 	});

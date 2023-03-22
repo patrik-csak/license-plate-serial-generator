@@ -1,11 +1,11 @@
 import {range as bb26Range} from 'bb26';
-import newJersey from './new-jersey';
 import {
 	getBeginningLetters,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import newJersey from './new-jersey.js';
 
 describe('New Jersey', () => {
 	testSerialFormat(newJersey(), /^[A-Z]\d{2}-[A-Z]{3}$/);
@@ -30,7 +30,7 @@ describe('New Jersey', () => {
 		const letters = getEndingLetters(serial);
 		const validLetters = bb26Range(
 			left === 'A10' ? 'EFF' : 'AAA',
-			left === 'C62' ? 'LKB' : 'AAAA'
+			left === 'C62' ? 'LKB' : 'AAAA',
 		);
 
 		expect(validLetters).toContain(letters);

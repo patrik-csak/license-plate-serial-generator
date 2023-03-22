@@ -3,13 +3,13 @@
 // - Range: `LZD 101` to `RFE 478`
 
 import {range as bb26Range} from 'bb26';
-import southCarolina from './south-carolina';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import southCarolina from './south-carolina.js';
 
 describe('South Carolina', () => {
 	testSerialFormat(southCarolina(), /^[A-Z]+ \d{3}$/);

@@ -3,13 +3,13 @@
 // - Range: `BBB-0001` to `MCZ-9999`
 
 import {range as bb26Range} from 'bb26';
-import texas from './texas';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import texas from './texas.js';
 
 describe('Texas', () => {
 	testSerialFormat(texas(), /^[A-Z]{3}-\d{4}$/);

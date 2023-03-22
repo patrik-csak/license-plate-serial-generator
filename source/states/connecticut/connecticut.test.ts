@@ -3,13 +3,13 @@
 // - Range: `AA-00001` to `AV-00042`
 
 import {range as bb26Range} from 'bb26';
-import connecticut from './connecticut';
-import interpunct from '../../lib/interpunct';
+import {interpunct} from '../../lib/index.js';
 import {
 	getBeginningLetters,
 	getEndingDigits,
-	testSerial
-} from '../../../tests/helpers';
+	testSerial,
+} from '../../../tests/helpers/index.js';
+import connecticut from './connecticut.js';
 
 describe('Connecticut', () => {
 	testSerial('Should be the correct format', connecticut(), (serial) => {
@@ -32,6 +32,6 @@ describe('Connecticut', () => {
 
 		expect(digits.length).toBe(5);
 		expect(Number(digits)).toBeGreaterThanOrEqual(1);
-		expect(Number(digits)).toBeLessThanOrEqual(letters === 'AV' ? 42 : 99999);
+		expect(Number(digits)).toBeLessThanOrEqual(letters === 'AV' ? 42 : 99_999);
 	});
 });

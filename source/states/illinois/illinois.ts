@@ -1,5 +1,5 @@
 import {random as randomBb26} from 'bb26';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [Illinois](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Illinois#1979_to_present)
@@ -17,8 +17,8 @@ import {randomNumericString} from '../../lib';
 export default function illinois(): string {
 	const letters = randomBb26('AQ', 'BP');
 	const numbers = randomNumericString(
-		letters === 'AQ' ? 11001 : 0,
-		letters === 'BP' ? 20703 : 99999
+		letters === 'AQ' ? 11_001 : 0,
+		letters === 'BP' ? 20_703 : 99_999,
 	);
 
 	return `${letters} ${numbers}`;

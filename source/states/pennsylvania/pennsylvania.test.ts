@@ -3,13 +3,13 @@
 // Range: `KLF-0000 to LBP-1791`
 
 import {range as bb26Range} from 'bb26';
-import pennsylvania from './pennsylvania';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import pennsylvania from './pennsylvania.js';
 
 describe('Pennsylvania', () => {
 	testSerialFormat(pennsylvania(), /^[A-Z]{3}-\d{4}$/);

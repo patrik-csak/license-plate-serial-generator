@@ -1,6 +1,6 @@
 export default function getFirstMatchingPattern(
 	string: string,
-	pattern: RegExp
+	pattern: RegExp,
 ): string {
 	const match = string.match(pattern);
 

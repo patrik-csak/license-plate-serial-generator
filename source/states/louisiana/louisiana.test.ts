@@ -3,13 +3,13 @@
 // - Range: `000 AAA` to `999 DEV`
 
 import {range as bb26Range} from 'bb26';
-import louisiana from './louisiana';
 import {
 	getBeginningDigits,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import louisiana from './louisiana.js';
 
 describe('Louisiana', () => {
 	testSerialFormat(louisiana(), /^\d{3} [A-Z]{3}$/);

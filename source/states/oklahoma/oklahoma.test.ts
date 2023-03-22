@@ -3,13 +3,13 @@
 // - Range: `AAA-001` to `JRK-999`
 
 import {range as bb26Range} from 'bb26';
-import oklahoma from './oklahoma';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import oklahoma from './oklahoma.js';
 
 describe('Oklahoma', () => {
 	testSerialFormat(oklahoma(), /^[A-Z]+-\d{3}$/);

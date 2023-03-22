@@ -1,11 +1,11 @@
 import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /** @ignore */
-interface Month {
+type Month = {
 	codes: string[];
-}
+};
 
 /** @ignore */
 const months: Month[] = [
@@ -20,7 +20,7 @@ const months: Month[] = [
 	{codes: ['S', 'T']},
 	{codes: ['U', 'V']},
 	{codes: ['W', 'X']},
-	{codes: ['Y', 'Z']}
+	{codes: ['Y', 'Z']},
 ];
 
 /**

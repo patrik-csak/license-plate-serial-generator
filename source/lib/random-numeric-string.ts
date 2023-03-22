@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/unified-signatures, no-redeclare */
-
+/* eslint-disable @typescript-eslint/unified-signatures */
 import randomInt from 'random-int';
 
 function randomNumericString(upper: number): string;
@@ -7,14 +6,14 @@ function randomNumericString(lower: number, upper: number): string;
 function randomNumericString(
 	lower: number,
 	upper: number,
-	length: number
+	length: number,
 ): string;
 
 /** @ignore */
 function randomNumericString(
 	lower: number,
 	upper?: number,
-	length?: number
+	length?: number,
 ): string {
 	const _lower = upper ? lower : 0;
 	const _upper = upper ?? lower;

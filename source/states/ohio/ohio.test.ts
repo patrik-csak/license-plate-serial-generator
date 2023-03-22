@@ -3,13 +3,13 @@
 // - Range: `FWA 1000` to `HUF 1415`
 
 import {range as bb26Range} from 'bb26';
-import ohio from './ohio';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import ohio from './ohio.js';
 
 describe('Ohio', () => {
 	testSerialFormat(ohio(), /^[A-Z]{3} \d{4}$/);

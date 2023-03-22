@@ -3,13 +3,13 @@
 // - Range: `1 GA` to `5252 XK`
 // Letter 'O' not used
 
-import maine from './maine';
 import {
 	getBeginningDigits,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import maine from './maine.js';
 
 describe('Maine', () => {
 	testSerialFormat(maine(), /^\d{1,4} [A-Z]{2}$/);

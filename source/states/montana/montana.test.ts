@@ -1,13 +1,13 @@
 // Spec:
 // - Format: `1-12345A` or `10-1234A`, where left half is county code
 
-import montana from './montana';
 import {
 	getBeginningDigits,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import montana from './montana.js';
 
 describe('Montana', () => {
 	testSerialFormat(montana(), /^\d{1,2}-\d{4,5}[A-Z]$/);
@@ -23,12 +23,12 @@ describe('Montana', () => {
 
 	testSerial('Should contain valid digits', montana(), (serial) => {
 		const matches = /^\d+-(\d+)/.exec(serial);
-		const digits = matches ? matches[1] : '';
+		const digits: string = matches ? matches[1]! : '';
 
 		expect(digits.length).toBeGreaterThanOrEqual(4);
 		expect(digits.length).toBeLessThanOrEqual(5);
 		expect(Number(digits)).toBeGreaterThanOrEqual(0);
-		expect(Number(digits)).toBeLessThanOrEqual(99999);
+		expect(Number(digits)).toBeLessThanOrEqual(99_999);
 	});
 
 	testSerial('Should end with a letter', montana(), (serial) => {

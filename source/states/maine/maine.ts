@@ -20,7 +20,7 @@ export default function maine(): string {
 
 	const validLetters = bb26Range(
 		digits === 1 ? 'GA' : 'AA',
-		digits === 5252 ? 'XL' : 'AAA'
+		digits === 5252 ? 'XL' : 'AAA',
 	).filter((letters) => !letters.includes('O'));
 
 	const letters = randomItem(validLetters);

@@ -3,13 +3,13 @@
 // - Range: `DAA 0000` to `ECR 9999`
 
 import {range as bb26Range} from 'bb26';
-import michigan from './michigan';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import michigan from './michigan.js';
 
 describe('Michigan', () => {
 	testSerialFormat(michigan(), /^[A-Z]+ \d{4}$/);

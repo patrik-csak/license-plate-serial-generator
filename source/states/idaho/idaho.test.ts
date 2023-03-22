@@ -10,8 +10,8 @@
 //   - `10B 1234` or
 //   - `10B A123`
 
-import idaho from './idaho';
-import testSerial from '../../../tests/helpers/test-serial';
+import {testSerial} from '../../../tests/helpers/index.js';
+import idaho from './idaho.js';
 
 describe('Idaho', () => {
 	testSerial('Should start with county code', idaho(), (serial) => {
@@ -21,7 +21,7 @@ describe('Idaho', () => {
 	testSerial('Should end correctly', idaho(), (serial) => {
 		expect(serial).toMatch(/^([A-Z]|\d[A-Z]|10B) /);
 		expect(serial).toMatch(
-			/ (\d{4,6}|[A-Z]\d{3,4}|[A-Z]{2}\d{3}|\d[A-Z]\d{3}|\d{4}[A-Z]|\d{3}[A-Z]{2})$/
+			/ (\d{4,6}|[A-Z]\d{3,4}|[A-Z]{2}\d{3}|\d[A-Z]\d{3}|\d{4}[A-Z]|\d{3}[A-Z]{2})$/,
 		);
 	});
 });

@@ -1,5 +1,5 @@
 import {random as randomBb26} from 'bb26';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [California](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_California#1963_to_present)
@@ -18,7 +18,7 @@ export default function california(): string {
 	let serial = randomNumericString(6, 8);
 	serial += randomBb26(
 		serial === '6' ? 'TPW' : 'AAA',
-		serial === '8' ? 'KPQ' : 'AAAA'
+		serial === '8' ? 'KPQ' : 'AAAA',
 	);
 	serial += randomNumericString(999);
 

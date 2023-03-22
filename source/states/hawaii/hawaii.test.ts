@@ -1,16 +1,16 @@
 import {range as bb26Range} from 'bb26';
-import hawaii, {
-	hawaiiCounty,
-	honoluluCounty,
-	kauaiCounty,
-	mauiCounty
-} from './hawaii';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import hawaii, {
+	hawaiiCounty,
+	honoluluCounty,
+	kauaiCounty,
+	mauiCounty,
+} from './hawaii.js';
 
 describe('Hawaii', () => {
 	testSerialFormat(hawaii(), /^[A-Z]{3} \d{3}$/);
@@ -27,7 +27,7 @@ describe('Hawaii', () => {
 			honoluluCounty(),
 			(serial) => {
 				expect(serial).toMatch(/^[E-GJNPR-Y][A-GIJN-Z]{2} \d{3}$/);
-			}
+			},
 		);
 
 		testSerial('Should contain valid letters', honoluluCounty(), (serial) => {
@@ -41,7 +41,7 @@ describe('Hawaii', () => {
 				...bb26Range('JAA', 'KAA'),
 				...bb26Range('NAA', 'OAA'),
 				...bb26Range('PAA', 'QAA'),
-				...bb26Range('RAA', 'TTU')
+				...bb26Range('RAA', 'TTU'),
 			].filter((string) => !/[HKLM]/.test(string));
 
 			expect(validLetters).toContain(letters);

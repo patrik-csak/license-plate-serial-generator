@@ -3,13 +3,13 @@
 // - Range: `FAA-1000` to `JJS-6999`
 
 import {range as bb26Range} from 'bb26';
-import newYork from './new-york';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import newYork from './new-york.js';
 
 describe('New York', () => {
 	testSerialFormat(newYork(), /^[A-Z]{3}-\d{4}$/);

@@ -3,13 +3,13 @@
 // - Range: `AAB 100` to `HNP 223`
 
 import {range as bb26Range} from 'bb26';
-import vermont from './vermont';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import vermont from './vermont.js';
 
 describe('Vermont', () => {
 	testSerialFormat(vermont(), /^[A-Z]{3} \d{3}$/);

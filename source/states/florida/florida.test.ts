@@ -3,13 +3,14 @@
 // - Range: `Z00 0AA` to `Z89 0FW`
 
 import {range as bb26Range} from 'bb26';
-import florida from './florida';
 import {
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import florida from './florida.js';
 
+// eslint-disable-next-line @typescript-eslint/restrict-plus-operands
 const getDigits = (serial: string) => serial.slice(1, 3) + serial[4];
 
 describe('Florida', () => {

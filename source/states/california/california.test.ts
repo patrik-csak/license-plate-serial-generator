@@ -3,8 +3,8 @@
 // - Range: `6TPW000` to `8KPP139`
 
 import {range as bb26Range} from 'bb26';
-import california from './california';
-import {testSerial, testSerialFormat} from '../../../tests/helpers';
+import {testSerial, testSerialFormat} from '../../../tests/helpers/index.js';
+import california from './california.js';
 
 describe('California', () => {
 	testSerialFormat(california(), /^\d[A-Z]{3}\d{3}$/);
@@ -15,7 +15,7 @@ describe('California', () => {
 		(serial) => {
 			expect(Number(serial[0])).toBeGreaterThanOrEqual(6);
 			expect(Number(serial[0])).toBeLessThanOrEqual(8);
-		}
+		},
 	);
 
 	testSerial('Letters should be valid', california(), (serial) => {
@@ -23,17 +23,24 @@ describe('California', () => {
 		let validLetters: string[];
 
 		switch (Number(serial[0])) {
-			case 6:
+			case 6: {
 				validLetters = bb26Range('TPW', 'AAAA');
 				break;
-			case 7:
+			}
+
+			case 7: {
 				validLetters = bb26Range('AAA', 'AAAA');
 				break;
-			case 8:
+			}
+
+			case 8: {
 				validLetters = bb26Range('AAA', 'KPQ');
 				break;
-			default:
+			}
+
+			default: {
 				throw new Error('Digit should be between 6 and 8');
+			}
 		}
 
 		expect(validLetters).toContain(letters);

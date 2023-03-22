@@ -1,7 +1,7 @@
 import {random as randomBb26} from 'bb26';
 import getRange from 'get-range';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /** @ignore */
 export function countyCoded(county: number): string {

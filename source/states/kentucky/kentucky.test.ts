@@ -3,13 +3,13 @@
 // - Range: `901 JCB` to `253 ZJK`
 
 import {range as bb26Range} from 'bb26';
-import kentucky from './kentucky';
-import testSerial from '../../../tests/helpers/test-serial';
 import {
 	getBeginningDigits,
 	getEndingLetters,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerial,
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import kentucky from './kentucky.js';
 
 describe('Kentucky', () => {
 	testSerialFormat(kentucky(), /^\d{3} [A-Z]{3}$/);

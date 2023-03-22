@@ -1,6 +1,6 @@
 import {range as bb26Range} from 'bb26';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [Alaska](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Alaska#1953_to_present)
@@ -17,9 +17,9 @@ import {randomNumericString} from '../../lib';
  */
 export default function alaska(): string {
 	const validLetters = [
-		...['FUZ'],
+		'FUZ',
 		...bb26Range('GAA', 'HAA'),
-		...bb26Range('KAA', 'KDZ')
+		...bb26Range('KAA', 'KDZ'),
 	];
 	const letters = randomItem(validLetters);
 	const numbers = randomNumericString(100, 999);

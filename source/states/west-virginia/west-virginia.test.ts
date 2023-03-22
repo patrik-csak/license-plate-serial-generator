@@ -12,12 +12,12 @@
 //     - O, N, D indicate Oct, Nov, Dec
 //   - Series 'S' and 'SA-SZ' reserved for optional Scenic plates
 
-import westVirginia from './west-virginia';
 import {
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import westVirginia from './west-virginia.js';
 
 describe('West Virginia', () => {
 	testSerialFormat(westVirginia(), /^[\dOND][\dA-Z]{1,2} \d{3,4}$/);
@@ -36,7 +36,7 @@ describe('West Virginia', () => {
 			const characters = match ? match[1] : '';
 
 			expect(characters).toMatch(/^[\dA-Z][A-Z]?$/);
-		}
+		},
 	);
 
 	testSerial('Should contain valid digits', westVirginia(), (serial) => {

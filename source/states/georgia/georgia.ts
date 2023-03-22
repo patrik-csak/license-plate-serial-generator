@@ -1,5 +1,5 @@
 import {random as randomBb26} from 'bb26';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [Georgia](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Georgia_(U.S._state)#1971_to_present)

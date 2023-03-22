@@ -1,5 +1,5 @@
 import {random as randomBb26} from 'bb26';
-import {interpunct, randomNumericString} from '../../lib';
+import {interpunct, randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [Connecticut](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Connecticut#1957_to_present)
@@ -16,7 +16,7 @@ import {interpunct, randomNumericString} from '../../lib';
  */
 export default function connecticut(): string {
 	const letters = randomBb26('AA', 'AW');
-	const numbers = randomNumericString(1, letters === 'AV' ? 42 : 99999, 5);
+	const numbers = randomNumericString(1, letters === 'AV' ? 42 : 99_999, 5);
 
 	return letters + interpunct + numbers;
 }

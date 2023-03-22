@@ -1,14 +1,14 @@
 import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /** @ignore */
-interface Range {
+type Range = {
 	digitsEnd: number;
 	digitsStart: number;
 	lettersStart: string;
 	lettersEnd: string;
-}
+};
 
 /**
  * Generates random serial for [Virginia](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Virginia#1973_to_present)
@@ -32,21 +32,21 @@ export default function virginia(): string {
 			digitsEnd: 9999,
 			digitsStart: 1000,
 			lettersEnd: 'VZZ',
-			lettersStart: 'VAA'
+			lettersStart: 'VAA',
 		},
 		{
 			digitsEnd: 2764,
 			digitsStart: 9999,
 			lettersEnd: 'UZZ',
-			lettersStart: 'UPA'
-		}
+			lettersStart: 'UPA',
+		},
 	];
 	const range = randomItem(ranges);
 
 	const letters = randomBb26(range.lettersStart, range.lettersEnd);
 	const numbers = randomNumericString(
 		letters === range.lettersStart ? range.digitsStart : 0,
-		letters === range.lettersEnd ? range.digitsEnd : 9999
+		letters === range.lettersEnd ? range.digitsEnd : 9999,
 	);
 
 	return `${letters}-${numbers}`;

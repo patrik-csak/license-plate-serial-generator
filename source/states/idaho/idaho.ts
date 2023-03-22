@@ -1,7 +1,7 @@
 import arrayShuffle from 'array-shuffle';
 import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [Idaho](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Idaho#1968_to_present)
@@ -26,10 +26,10 @@ import {randomNumericString} from '../../lib';
  * ```
  */
 export default function idaho(): string {
-	interface County {
+	type County = {
 		letter: string;
 		count: number;
-	}
+	};
 
 	const counties: County[] = [
 		{letter: 'A', count: 2},
@@ -49,7 +49,7 @@ export default function idaho(): string {
 		{letter: 'S', count: 1},
 		{letter: 'T', count: 2},
 		{letter: 'V', count: 1},
-		{letter: 'W', count: 1}
+		{letter: 'W', count: 1},
 	];
 	const countyCodes: string[] = [];
 	let numbers: string;
@@ -70,7 +70,7 @@ export default function idaho(): string {
 			// There's only one county character, so the format must be
 			// `A 123456`
 
-			right = randomNumericString(999999);
+			right = randomNumericString(999_999);
 
 			break;
 		}
@@ -80,7 +80,7 @@ export default function idaho(): string {
 			// `0A 12345`, `0A A1234`, `0A AB123`, `0A 1A234`, `0A 1234A`, or
 			// `0A 123AB`
 
-			numbers = randomNumericString(randomItem([999, 9999, 99999]));
+			numbers = randomNumericString(randomItem([999, 9999, 99_999]));
 
 			switch (numbers.length) {
 				case 3: {

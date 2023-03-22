@@ -15,20 +15,20 @@
     "generator",
     "random"
   ],
-  "main": "dist",
+  "exports": "./dist/index.js",
   "files": [
     "dist",
     "!dist/*.js.map"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "del-cli dist && tsc",
     "docs": "typedoc",
     "docs:develop": "npm-run-all --parallel docs:serve docs:watch",
     "docs:serve": "nodemon --ext html --watch docs --exec 'npx serve docs'",
     "docs:watch": "nodemon --ext ts --watch source --exec 'npm run docs'",
     "format": "xo --fix",
     "generate-serial": "scripts/generate-serial.js",
-    "prepare": "del-cli dist && npm run build && husky install",
+    "prepare": "npm run build && husky install",
     "test": "xo && jest",
     "test:coverage": "xo && jest --coverage"
   },
@@ -40,21 +40,22 @@
     "random-item": "^3.1.0"
   },
   "devDependencies": {
-    "@tsconfig/recommended": "^1.0.1",
-    "@types/jest": "^29.2.4",
+    "@tsconfig/node16-strictest": "^1.0.4",
+    "@types/jest": "^29.5.0",
     "del-cli": "^5.0.0",
     "husky": "^8.0.2",
-    "jest": "^29.3.1",
+    "jest": "^29.5.0",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "serve": "^14.1.2",
-    "ts-jest": "^29.0.3",
+    "ts-jest": "^29.0.5",
     "typedoc": "^0.23.21",
-    "typescript": "^4.5.4",
-    "xo": "^0.39.1"
+    "typescript": "^4.9.5",
+    "xo": "^0.53.1"
   },
   "engines": {
     "node": ">=14 <=19"
   },
-  "types": "dist"
+  "types": "dist",
+  "type": "module"
 }

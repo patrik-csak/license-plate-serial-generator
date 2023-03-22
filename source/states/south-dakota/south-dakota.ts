@@ -2,7 +2,7 @@ import {random as randomBb26} from 'bb26';
 import getRange from 'get-range';
 import randomInt from 'random-int';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [South Dakota](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_South_Dakota#1976_to_present)
@@ -27,7 +27,9 @@ export default function southDakota(): string {
 
 	left += randomBb26('Z');
 
-	if (left.length === 2) left += randomInt(9);
+	if (left.length === 2) {
+		left += randomInt(9).toString();
+	}
 
 	return `${left} ${right}`;
 }

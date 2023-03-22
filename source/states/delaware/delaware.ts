@@ -14,5 +14,5 @@ import randomInt from 'random-int';
  * ```
  */
 export default function delaware(): string {
-	return `${randomInt(4, 999999)}`;
+	return `${randomInt(4, 999_999)}`;
 }

@@ -3,13 +3,13 @@
 // - Range: `000 BTR` to `825 CNK`
 
 import {range as bb26Range} from 'bb26';
-import northDakota from './north-dakota';
 import {
 	getBeginningDigits,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import northDakota from './north-dakota.js';
 
 describe('North Dakota', () => {
 	testSerialFormat(northDakota(), /^\d{3} [A-Z]{3}$/);
@@ -27,7 +27,7 @@ describe('North Dakota', () => {
 
 		const validLetters = bb26Range(
 			digits === '000' ? 'BTR' : 'AAA',
-			digits === '825' ? 'CNL' : 'AAAA'
+			digits === '825' ? 'CNL' : 'AAAA',
 		);
 
 		expect(validLetters).toContain(letters);

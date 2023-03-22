@@ -6,8 +6,8 @@
 //   - `KAA 100` to `KDY 999` (as of 2019-04-10)
 
 import {range as bb26Range} from 'bb26';
-import alaska from './alaska';
-import {testSerial, testSerialFormat} from '../../../tests/helpers';
+import {testSerial, testSerialFormat} from '../../../tests/helpers/index.js';
+import alaska from './alaska.js';
 
 describe('Alaska', () => {
 	testSerialFormat(alaska(), /^[A-Z]{3} \d{3}$/);
@@ -21,17 +21,24 @@ describe('Alaska', () => {
 		let validLetters: string[];
 
 		switch (firstLetter) {
-			case 'F':
+			case 'F': {
 				validLetters = ['FUZ'];
 				break;
-			case 'G':
+			}
+
+			case 'G': {
 				validLetters = bb26Range('GAA', 'HAA');
 				break;
-			case 'K':
+			}
+
+			case 'K': {
 				validLetters = bb26Range('KAA', 'KDZ');
 				break;
-			default:
+			}
+
+			default: {
 				throw new Error(`Unexpected letter sequence: '${letters}'`);
+			}
 		}
 
 		expect(validLetters).toContain(letters);
@@ -44,28 +51,35 @@ describe('Alaska', () => {
 		expect(digits.length).toBe(3);
 
 		switch (letters[0]) {
-			case 'F':
+			case 'F': {
 				expect(Number(digits)).toBeGreaterThanOrEqual(
-					letters === 'FUZ' ? 100 : 1
+					letters === 'FUZ' ? 100 : 1,
 				);
 				expect(Number(digits)).toBeLessThanOrEqual(999);
 				break;
-			case 'G':
+			}
+
+			case 'G': {
 				expect(Number(digits)).toBeGreaterThanOrEqual(
-					letters === 'GAA' ? 100 : 1
+					letters === 'GAA' ? 100 : 1,
 				);
 				expect(Number(digits)).toBeLessThanOrEqual(999);
 				break;
-			case 'K':
+			}
+
+			case 'K': {
 				expect(Number(digits)).toBeGreaterThanOrEqual(
-					letters === 'KAA' ? 100 : 1
+					letters === 'KAA' ? 100 : 1,
 				);
 				expect(Number(digits)).toBeLessThanOrEqual(
-					letters === 'KDY' ? 641 : 999
+					letters === 'KDY' ? 641 : 999,
 				);
 				break;
-			default:
+			}
+
+			default: {
 				throw new Error(`Unexpected letter sequence: '${letters}'`);
+			}
 		}
 	});
 });

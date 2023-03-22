@@ -10,13 +10,13 @@
 //   - Range: 'A00 1AA' to 'F76 4TE'
 
 import {range as bb26Range} from 'bb26';
-import utah, {arch, god, ski} from './utah';
 import {
 	getBeginningLetters,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import utah, {arch, god, ski} from './utah.js';
 
 const archRegex = /^[A-Z]\d{2} \d[A-Z]{2}$/;
 const godRegex = /^\d[A-Z]\d[A-Z]{2}$/;
@@ -44,7 +44,7 @@ describe('Utah', () => {
 			const letters = getEndingLetters(serial);
 			const validLetters = bb26Range(
 				serial.startsWith('V21 5') ? 'RK' : 'AA',
-				serial.startsWith('Z00 1') ? 'AB' : 'AAA'
+				serial.startsWith('Z00 1') ? 'AB' : 'AAA',
 			);
 
 			expect(validLetters).toContain(letters);
@@ -74,7 +74,7 @@ describe('Utah', () => {
 
 			expect(Number(digit)).toBeGreaterThanOrEqual(0);
 			expect(Number(digit)).toBeLessThanOrEqual(
-				serial.startsWith('5E') ? 1 : 9
+				serial.startsWith('5E') ? 1 : 9,
 			);
 		});
 
@@ -82,7 +82,7 @@ describe('Utah', () => {
 			const letters = getEndingLetters(serial);
 			const validLetters = bb26Range(
 				'AA',
-				serial.startsWith('5E1') ? 'NZ' : 'AAA'
+				serial.startsWith('5E1') ? 'NZ' : 'AAA',
 			);
 
 			expect(validLetters).toContain(letters);

@@ -2,8 +2,8 @@
 // - Format: `123 4567`
 // - Range: `100 0000` to `458 5718`
 
-import newHampshire from './new-hampshire';
-import {testSerial, testSerialFormat} from '../../../tests/helpers';
+import {testSerial, testSerialFormat} from '../../../tests/helpers/index.js';
+import newHampshire from './new-hampshire.js';
 
 describe('New Hampshire', () => {
 	testSerialFormat(newHampshire(), /^\d{3} \d{4}$/);
@@ -11,7 +11,7 @@ describe('New Hampshire', () => {
 	testSerial('Should contain valid digits', newHampshire(), (serial) => {
 		serial = serial.replace(' ', '');
 
-		expect(Number(serial)).toBeGreaterThanOrEqual(1000000);
-		expect(Number(serial)).toBeLessThanOrEqual(4585718);
+		expect(Number(serial)).toBeGreaterThanOrEqual(1_000_000);
+		expect(Number(serial)).toBeLessThanOrEqual(4_585_718);
 	});
 });

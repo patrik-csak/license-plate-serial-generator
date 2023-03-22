@@ -1,5 +1,5 @@
 import {random as randomBb26} from 'bb26';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [Pennsylvania](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Pennsylvania#1958_to_present)

@@ -4,13 +4,13 @@
 
 import {range as bb26Range} from 'bb26';
 
-import georgia from './georgia';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import georgia from './georgia.js';
 
 describe('Georgia', () => {
 	testSerialFormat(georgia(), /^[A-Z]{3}\d{4}$/);

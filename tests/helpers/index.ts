@@ -1,15 +1,6 @@
-import getBeginningDigits from './get-beginning-digits';
-import getBeginningLetters from './get-beginning-letters';
-import getEndingDigits from './get-ending-digits';
-import getEndingLetters from './get-ending-letters';
-import testSerial from './test-serial';
-import testSerialFormat from './test-serial-format';
-
-export {
-	getBeginningDigits,
-	getBeginningLetters,
-	getEndingDigits,
-	getEndingLetters,
-	testSerial,
-	testSerialFormat
-};
+export {default as getBeginningDigits} from './get-beginning-digits.js';
+export {default as getBeginningLetters} from './get-beginning-letters.js';
+export {default as getEndingDigits} from './get-ending-digits.js';
+export {default as getEndingLetters} from './get-ending-letters.js';
+export {default as testSerial} from './test-serial.js';
+export {default as testSerialFormat} from './test-serial-format.js';

@@ -4,13 +4,13 @@
 
 import {range as bb26Range} from 'bb26';
 
-import washingtonDc from './washington-dc';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import washingtonDc from './washington-dc.js';
 
 describe('Washington DC', () => {
 	testSerialFormat(washingtonDc(), /^[A-Z]{2}-\d{4}$/);

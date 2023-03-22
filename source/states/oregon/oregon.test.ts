@@ -3,13 +3,13 @@
 // - Range: `001 BAA` to `006 LPV`
 
 import {range as bb26Range} from 'bb26';
-import oregon from './oregon';
 import {
 	getBeginningDigits,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import oregon from './oregon.js';
 
 describe('Oregon', () => {
 	testSerialFormat(oregon(), /^\d{3} [A-Z]{3}$/);

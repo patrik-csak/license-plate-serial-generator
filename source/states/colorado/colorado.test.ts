@@ -3,13 +3,14 @@
 // - Range: AEW-T01 to BFM-Y21
 
 import {range as bb26Range} from 'bb26';
-import colorado from './colorado';
 import {
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import colorado from './colorado.js';
 
+// eslint-disable-next-line @typescript-eslint/restrict-plus-operands
 const getLetters = (serial: string) => serial.slice(0, 3) + serial[4];
 
 describe('Colorado', () => {
@@ -28,17 +29,22 @@ describe('Colorado', () => {
 		expect(digits.length).toBe(2);
 
 		switch (getLetters(serial)) {
-			case 'AEWT':
+			case 'AEWT': {
 				expect(Number(digits)).toBeGreaterThanOrEqual(1);
 				expect(Number(digits)).toBeLessThanOrEqual(99);
 				break;
-			case 'BFMY':
+			}
+
+			case 'BFMY': {
 				expect(Number(digits)).toBeGreaterThanOrEqual(0);
 				expect(Number(digits)).toBeLessThanOrEqual(21);
 				break;
-			default:
+			}
+
+			default: {
 				expect(Number(digits)).toBeGreaterThanOrEqual(0);
 				expect(Number(digits)).toBeLessThanOrEqual(99);
+			}
 		}
 	});
 });

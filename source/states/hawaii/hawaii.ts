@@ -1,6 +1,6 @@
 import {random as randomBb26, range as bb26Range} from 'bb26';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /** @ignore */
 export function hawaiiCounty(): string {
@@ -14,7 +14,7 @@ export function hawaiiCounty(): string {
 export function honoluluCounty(): string {
 	const county = randomItem(['E', 'F', 'G', 'J', 'N', 'P', 'R', 'S', 'T']);
 	const validLetters = bb26Range('AA', county === 'T' ? 'TU' : 'AAA').filter(
-		(letters) => !/[HKLM]/.test(letters)
+		(letters) => !/[HKLM]/.test(letters),
 	);
 	const letters = randomItem(validLetters);
 	const numbers = randomNumericString(999);

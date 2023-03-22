@@ -3,14 +3,14 @@
 // - Range: `1AAA 10` to `9ZZZ 99`
 // - Letters `I`, `O`, `Q`, and `U` not used
 
-import massachusetts from './massachusetts';
 import {
 	getBeginningDigits,
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import massachusetts from './massachusetts.js';
 
 describe('Massachusetts', () => {
 	testSerialFormat(massachusetts(), /^\d[A-HJ-NPRSTV-Z]{3} \d{2}$/);

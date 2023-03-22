@@ -3,13 +3,13 @@
 // - Range: `001 KPG` to `999 YFZ`
 
 import {range as bb26Range} from 'bb26';
-import arkansas from './arkansas';
 import {
 	getBeginningDigits,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import arkansas from './arkansas.js';
 
 describe('Arkansas', () => {
 	testSerialFormat(arkansas(), /^\d{3} [A-Z]{3}$/);

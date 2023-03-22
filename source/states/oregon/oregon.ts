@@ -1,5 +1,5 @@
 import {random as randomBb26} from 'bb26';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /**
  * Generates random serial for [Oregon](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Oregon#1950_to_present)

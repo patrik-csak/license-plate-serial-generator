@@ -3,9 +3,8 @@
 // - `0` or `00` is county code
 
 import getRange from 'get-range';
-import alabama from './alabama';
-import testSerial from '../../../tests/helpers/test-serial';
-import getBeginningDigits from '../../../tests/helpers/get-beginning-digits';
+import {getBeginningDigits, testSerial} from '../../../tests/helpers/index.js';
+import alabama from './alabama.js';
 
 // https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Alabama#County_coding
 const countyCodes = [...getRange({start: 1, end: 68}), 70, 80];
@@ -28,7 +27,7 @@ describe('Alabama', () => {
 			const letters = serial.slice(countyCode.length, 2 + countyCode.length);
 
 			expect(letters).toMatch(/[A-Z]{2}/);
-		}
+		},
 	);
 
 	testSerial('Should end with digits', alabama(), (serial) => {

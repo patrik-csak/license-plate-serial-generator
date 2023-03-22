@@ -1,7 +1,7 @@
 import {random as randomBb26} from 'bb26';
 import randomInt from 'random-int';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /** @ignore */
 export function alphaNumeric(): string {
@@ -13,7 +13,7 @@ export function alphaNumeric(): string {
 
 /** @ignore */
 export function numeric(): string {
-	return randomNumericString(99999);
+	return randomNumericString(99_999);
 }
 
 /**

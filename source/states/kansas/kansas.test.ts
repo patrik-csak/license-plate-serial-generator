@@ -1,11 +1,11 @@
 import {range as bb26Range} from 'bb26';
-import kansas from './kansas';
 import {
 	getBeginningDigits,
 	getEndingLetters,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import kansas from './kansas.js';
 
 describe('Kansas', () => {
 	testSerialFormat(kansas(), /^\d{3} [A-Z]+$/);
@@ -28,7 +28,7 @@ describe('Kansas', () => {
 
 		const validLetters = bb26Range(
 			digits === '000' ? 'LJX' : 'AAA',
-			digits === '302' ? 'PLA' : 'AAAA'
+			digits === '302' ? 'PLA' : 'AAAA',
 		).filter((letters) => !/[IOQ]/.test(letters));
 
 		expect(validLetters).toContain(letters);

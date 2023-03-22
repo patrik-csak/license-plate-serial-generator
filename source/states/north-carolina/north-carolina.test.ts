@@ -3,13 +3,13 @@
 // - Range: `PAA-1001` to `PLA-9999`
 
 import {range as bb26Range} from 'bb26';
-import northCarolina from './north-carolina';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import northCarolina from './north-carolina.js';
 
 describe('North Carolina', () => {
 	testSerialFormat(northCarolina(), /^[A-Z]{3}-\d{4}$/);

@@ -1,12 +1,12 @@
-import nevada from './nevada';
 import {
 	getBeginningDigits,
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
-import {interpunct} from '../../lib';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import {interpunct} from '../../lib/index.js';
+import nevada from './nevada.js';
 
 describe('Nevada', () => {
 	testSerialFormat(nevada(), new RegExp(`^\\d{3}${interpunct}[A-Z]\\d{2}$`));
@@ -26,9 +26,9 @@ describe('Nevada', () => {
 
 			expect(letter.length).toBe(1);
 			expect(letter).toMatch(
-				serial.startsWith(`191${interpunct}`) ? /[A-T]/ : /[A-Z]/
+				serial.startsWith(`191${interpunct}`) ? /[A-T]/ : /[A-Z]/,
 			);
-		}
+		},
 	);
 
 	testSerial(
@@ -39,8 +39,8 @@ describe('Nevada', () => {
 
 			expect(Number(digits)).toBeGreaterThanOrEqual(0);
 			expect(Number(digits)).toBeLessThanOrEqual(
-				digits === `191${interpunct}T` ? 71 : 99
+				digits === `191${interpunct}T` ? 71 : 99,
 			);
-		}
+		},
 	);
 });

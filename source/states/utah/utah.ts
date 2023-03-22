@@ -1,6 +1,6 @@
 import {random as randomBb26} from 'bb26';
 import randomItem from 'random-item';
-import {randomNumericString} from '../../lib';
+import {randomNumericString} from '../../lib/index.js';
 
 /** @ignore */
 export function arch(): string {
@@ -8,11 +8,11 @@ export function arch(): string {
 	const digits = randomNumericString(
 		letter === 'V' ? 215 : 1,
 		letter === 'Z' ? 1 : 999,
-		3
+		3,
 	);
 	const letters = randomBb26(
 		letter + digits === 'V215' ? 'RK' : 'AA',
-		letter + digits === 'Z001' ? 'AA' : 'AAA'
+		letter + digits === 'Z001' ? 'AA' : 'AAA',
 	);
 	const left = letter + digits.slice(0, 2);
 	const right = digits.slice(2) + letters;

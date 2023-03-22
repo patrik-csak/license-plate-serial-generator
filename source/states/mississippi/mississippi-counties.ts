@@ -1,10 +1,10 @@
 import {range as bb26Range} from 'bb26';
 
 /** @ignore */
-export interface County {
+export type County = {
 	county: string;
 	codes: string[];
-}
+};
 
 /** @ignore */
 const counties: County[] = [
@@ -87,7 +87,7 @@ const counties: County[] = [
 	{county: 'Wilkinson', codes: ['WK']},
 	{county: 'Winston', codes: ['WN', 'WP']},
 	{county: 'Yalobusha', codes: ['YL']},
-	{county: 'Yazoo', codes: ['YZ', 'YA']}
+	{county: 'Yazoo', codes: ['YZ', 'YA']},
 ];
 
 export default counties;

@@ -3,13 +3,13 @@
 // - Range: `GXV 200` to `IBB 999`
 
 import {range as bb26Range} from 'bb26';
-import iowa from './iowa';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import iowa from './iowa.js';
 
 describe('Iowa', () => {
 	testSerialFormat(iowa(), /^[A-Z]{3} \d{3}$/);

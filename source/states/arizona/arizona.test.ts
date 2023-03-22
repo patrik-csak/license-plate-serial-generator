@@ -3,13 +3,13 @@
 // - Range: `AAA0001` to `CNX1511` (as of 2019-05-28)
 
 import {range as bb26Range} from 'bb26';
-import arizona from './arizona';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import arizona from './arizona.js';
 
 describe('Arizona', () => {
 	testSerialFormat(arizona(), /^[A-Z]{3}\d{4}$/);
@@ -25,7 +25,7 @@ describe('Arizona', () => {
 			const validLetters = bb26Range('AAA', 'CNY');
 
 			expect(validLetters).toContain(letters);
-		}
+		},
 	);
 
 	testSerial('Last four characters should be digits', arizona(), (serial) => {

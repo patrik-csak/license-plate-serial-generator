@@ -3,13 +3,13 @@
 // - Range: `BBB-001` to `BVK-999`
 
 import {range as bb26Range} from 'bb26';
-import tennessee from './tennessee';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import tennessee from './tennessee.js';
 
 describe('Tennessee', () => {
 	testSerialFormat(tennessee(), /^[A-Z]{3}-\d{3}$/);

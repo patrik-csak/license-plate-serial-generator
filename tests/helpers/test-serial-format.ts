@@ -1,8 +1,8 @@
-import testSerial from './test-serial';
+import testSerial from './test-serial.js';
 
 export default function testSerialFormat(
 	serial: string,
-	pattern: RegExp | RegExp[]
+	pattern: RegExp | RegExp[],
 ): void {
 	const patterns = Array.isArray(pattern) ? pattern : [pattern];
 

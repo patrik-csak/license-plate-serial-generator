@@ -5,13 +5,13 @@
 // - Range:
 
 import {range as bb26Range} from 'bb26';
-import rhodeIsland, {alphaNumeric, numeric} from './rhode-island';
 import {
 	getBeginningLetters,
 	getEndingDigits,
 	testSerial,
-	testSerialFormat
-} from '../../../tests/helpers';
+	testSerialFormat,
+} from '../../../tests/helpers/index.js';
+import rhodeIsland, {alphaNumeric, numeric} from './rhode-island.js';
 
 const alphaNumericRegex = /^[A-Z]{2}-\d{2,3}$/;
 const numericRegex = /^\d{5}$/;
